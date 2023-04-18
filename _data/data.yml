@@ -13,7 +13,7 @@ sidebar:
 
     # Sidebar links
     email: nitishshukla86@gmail.com
-    phone: 9169056945
+    phone: (+91) 9169056945
     timezone: #America/Cancun Timezone
     citizenship: Indian
     website: 
@@ -51,10 +51,13 @@ sidebar:
           link:
 
 career-profile:
-    title: Career Profile
+    title: Profile
     summary: |
-      Hi, I am a Data Scientist at Micron. Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
-      Indian Institute of .
+      Hi, I am currently a Data Scientist at Micron. Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
+      [IIT Guwahati](https://www.iitg.ac.in). At CMI I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
+      in DNNs induced by prototypes. I am joining University of Virginia under Prof [Madhav Marathe](https://engineering.virginia.edu/faculty/madhav-marathe) in Fall 23.
+
+      In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains.
 
 education:
     title: Education
@@ -110,7 +113,8 @@ experiences:
         time: 2022 - Present
         company: Micron Technology, Hyderabad
         details: |
-          -Responsible for development and maintainance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process
+          -Responsible for development and maintainance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
+          
           -Developed a synthetic data generation technique to generate visually realistic wafer images for finetuning.
           -Led team to file 3 patents and 2 publications.
       - role: R&D Engineer
