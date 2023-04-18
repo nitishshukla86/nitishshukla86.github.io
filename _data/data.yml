@@ -57,11 +57,18 @@ career-profile:
       [IIT Guwahati](https://www.iitg.ac.in). At CMI I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
       in DNNs induced by prototypes. I am joining University of Virginia under Prof [Madhav Marathe](https://engineering.virginia.edu/faculty/madhav-marathe) in Fall 23.
 
+      My research interest mainly include deep learning and explainability aspects of it. I am also interestd in theoretical computer science, mainly graph theory.
+      I am always looking to merge my applicative and theory interests and look at deep learning from interesting lenses.
+
       In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains.
 
 education:
     title: Education
     info:
+      - degree: PhD in Computer Science
+        university: University of Virgunia
+        time: Starting Fall 23
+
       - degree: MSc in Computer Science
         university: Chennai Mathematical Institute
         time: 2020 - 2022
@@ -73,14 +80,10 @@ education:
       - degree: MSc in Mathematics
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
-        details: |
-          Describe your study here lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-          sociis natoque penatibus et magnis dis parturient montes, nascetur
-          ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-          pretium quis, sem.
-            - Bullet point
-            - Bullet point
+      - degree: BSc in Mathematics
+        university: Kanpur University
+        time: 2014 - 2017
+
 publications:
     title: Publications
     intro: 
@@ -114,7 +117,7 @@ experiences:
         company: Micron Technology, Hyderabad
         details: |
           -Responsible for development and maintainance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
-          
+
           -Developed a synthetic data generation technique to generate visually realistic wafer images for finetuning.
           -Led team to file 3 patents and 2 publications.
       - role: R&D Engineer
