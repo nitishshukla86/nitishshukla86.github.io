@@ -72,11 +72,11 @@ education:
       - degree: MSc in Computer Science
         university: Chennai Mathematical Institute
         time: 2020 - 2022
-        details: |
-          Worked with Prof. [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) on tying knots between 
+        # details: |
+        #   Worked with Prof. [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) on tying knots between 
        
-            - Bullet point
-            - Bullet point
+        #     - Bullet point
+        #     - Bullet point
       - degree: MSc in Mathematics
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
@@ -119,6 +119,7 @@ experiences:
           -Responsible for development and maintainance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
 
           -Developed a synthetic data generation technique to generate visually realistic wafer images for finetuning.
+
           -Led team to file 3 patents and 2 publications.
       - role: R&D Engineer
         time: 2019 - 2020
@@ -204,5 +205,5 @@ experiences:
 #       - name: Sketch & Photoshop
 #         level: 60%
 
-footer: >
-    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+# footer: >
+#     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
