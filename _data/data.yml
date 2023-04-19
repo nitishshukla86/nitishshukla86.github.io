@@ -60,13 +60,13 @@ career-profile:
       My research interest mainly include deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
       I am always looking to merge my application and theory interests and look at deep learning from interesting lenses.
 
-      In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains.
+      In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains. 
 
 education:
     title: Education
     info:
       - degree: PhD in Computer Science
-        university: University of Virgunia
+        university: University of Virginia
         time: Starting Fall 23
 
       - degree: MSc in Computer Science
