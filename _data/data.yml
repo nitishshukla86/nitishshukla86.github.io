@@ -57,7 +57,7 @@ career-profile:
       [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
       in DNNs induced by prototypes. I am joining the University of Virginia under Prof [Madhav Marathe](https://engineering.virginia.edu/faculty/madhav-marathe) in Fall 23.
 
-      My research interest mainly include deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
+      My research interest mainly includes deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
       I am always looking to merge my application and theory interests and look at deep learning from interesting lenses.
 
       In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains. 
@@ -69,7 +69,7 @@ education:
         university: University of Virginia
         time: Starting Fall 23
 
-      - degree: MSc in Computer Science
+      - degree: M.Sc. in Computer Science
         university: Chennai Mathematical Institute
         time: 2020 - 2022
         # details: |
@@ -77,10 +77,10 @@ education:
        
         #     - Bullet point
         #     - Bullet point
-      - degree: MSc in Mathematics
+      - degree: M.Sc. in Mathematics
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
-      - degree: BSc in Mathematics
+      - degree: B.Sc. in Mathematics
         university: Kanpur University
         time: 2014 - 2017
 
@@ -116,16 +116,16 @@ experiences:
         time: 2022 - Present
         company: Micron Technology, Hyderabad
         details: |
-          -Responsible for development and maintainance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
+          -Responsible for development and maintenance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
 
-          -Developed a synthetic data generation technique to generate visually realistic wafer images for finetuning.
+          -Developed a synthetic data generation technique to generate visually realistic wafer images for fine-tuning.
 
           -Led team to file 3 patents and 2 publications.
       - role: R&D Engineer
         time: 2019 - 2020
         company: Next Education India Pvt. Ltd., Hyderabad
         details: |
-          -Developed a hand writing recognition(HTR) system to produce transcript of notes written on electronic white board.
+          -Developed a handwriting recognition(HTR) system to produce transcript of notes written on electronic white board.
       # - role: UI Developer
       #   time: 2012 - 2014
       #   company: Amazon, London
