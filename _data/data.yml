@@ -56,8 +56,7 @@ career-profile:
     summary: |
       Hi, I am currently a Data Scientist at Micron. Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
       [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
-      in DNNs induced by prototypes.
-#     I am joining the University of Virginia under Prof [Madhav Marathe](https://engineering.virginia.edu/faculty/madhav-marathe) in Fall 23.
+      in DNNs induced by prototypes. 
 
       My research interest mainly includes deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
       I am always looking to merge my application and theory interests and look at deep learning from interesting lenses.
@@ -95,12 +94,12 @@ publications:
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
         
-      - title: 'SDeMorph : Towards Better Facial Demorphing from Single Morph'  
+      - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
         link: "https://arxiv.org/search/?query=Nitish+shukla&searchtype=all&source=header"
         authors: Nitish Shukla
         conference: Under Reviev, IJCB-2023
 
-      - title: "Mixed-Type Wafer Classification For Low Memory Devices Using Knowledge Distillation "
+      - title: Mixed-Type Wafer Classification For Low Memory Devices Using Knowledge Distillation
         link: "https://arxiv.org/abs/2303.13974"
         authors: Nitish Shukla, Anurima Dey, Srivatsan K.
         conference: "Under Review, 2023"
