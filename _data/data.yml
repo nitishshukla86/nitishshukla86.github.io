@@ -27,7 +27,7 @@ sidebar:
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
-    pdf: https://www.dropbox.com/s/sywi5bhxorn7996/CV-Merged.pdf?dl=0
+    pdf: https://www.dropbox.com/scl/fi/gw2ot36aexz7ux7bri74j/resume_short_merged.pdf?rlkey=8r489hh20n20cb3wavdhs0u4f&dl=0
   
 
     languages:
@@ -93,6 +93,12 @@ publications:
         link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
+                
+     - title: An Elegantly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
+        link: "https://arxiv.org/abs/2303.11632"
+        authors: Nitish Shukla
+        conference: 46th International Semiconductor Conference (CAS), Romania, 2023.
+
         
       - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
         link: "https://arxiv.org/search/?query=Nitish+shukla&searchtype=all&source=header"
@@ -109,10 +115,7 @@ publications:
         authors: Nitish Shukla
         conference: "Under review"
 
-      - title: An Elegantly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
-        link: "https://arxiv.org/abs/2303.11632"
-        authors: Nitish Shukla
-        conference: 46th International Semiconductor Conference (CAS), Romania, 2023.
+
 
 
 experiences:
