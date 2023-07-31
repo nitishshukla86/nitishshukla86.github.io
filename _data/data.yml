@@ -61,7 +61,7 @@ career-profile:
       My research interest mainly includes deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
       I am always looking to merge my application and theory interests and look at deep learning from interesting lenses.
 
-      In my free time, I watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains. 
+      In my free time, I cook, watch movies and play video games. I am also an avid hiker and a great admirer of snowy mountains. 
 
 education:
     title: Education
@@ -109,10 +109,10 @@ publications:
         authors: Nitish Shukla
         conference: "Under review"
 
-      - title: An Embarrassingly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
+      - title: An Elegantly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
         link: "https://arxiv.org/abs/2303.11632"
         authors: Nitish Shukla
-        conference: "Under review"
+        conference: 46th International Semiconductor Conference (CAS), Romania, 2023.
 
 
 experiences:
