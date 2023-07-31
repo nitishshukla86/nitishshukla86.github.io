@@ -95,7 +95,7 @@ publications:
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
           
-    - title: An Embarrassingly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
+      - title: An Embarrassingly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
         link: "https://arxiv.org/abs/2303.11632"
         authors: Nitish Shukla
         conference: "46th International Semiconductor Conference (CAS), Romania, 2023"
