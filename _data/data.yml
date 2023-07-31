@@ -97,13 +97,13 @@ publications:
      - title: An Elegantly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
         link: "https://arxiv.org/abs/2303.11632"
         authors: Nitish Shukla
-        conference: 46th International Semiconductor Conference (CAS), Romania, 2023.
+        conference: 46th International Semiconductor Conference (CAS), Romania, 2023
 
         
       - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
         link: "https://arxiv.org/search/?query=Nitish+shukla&searchtype=all&source=header"
         authors: Nitish Shukla
-        conference: Under Reviev, IJCB-2023
+        conference: Under Review, IJCB-2023
 
       - title: Mixed-Type Wafer Classification For Low Memory Devices Using Knowledge Distillation
         link: "https://arxiv.org/abs/2303.13974"
@@ -113,7 +113,7 @@ publications:
       - title: Efficient Mixed-Type Wafer Defect Pattern Recognition Using Compact Deformable Convolutional Transformers
         link: "https://arxiv.org/abs/2303.13827"
         authors: Nitish Shukla
-        conference: "Under review"
+        conference: "Under Review"
 
 
 
