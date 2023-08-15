@@ -103,7 +103,7 @@ publications:
       - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
         link: "https://arxiv.org/search/?query=Nitish+shukla&searchtype=all&source=header"
         authors: Nitish Shukla
-        conference: IEEE International Joint Conference on Biometrics : ADMA-2023
+        conference: IEEE International Joint Conference on Biometrics ADMA-2023
 
       - title: Mixed-Type Wafer Classification For Low Memory Devices Using Knowledge Distillation
         link: "https://arxiv.org/abs/2303.13974"
