@@ -94,26 +94,13 @@ publications:
         link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
-          
-      - title: An Embarrassingly Simple Approach for Wafer Feature Extraction and Defect Pattern Recognition
-        link: "https://arxiv.org/abs/2303.11632"
-        authors: Nitish Shukla
-        conference: "46th International Semiconductor Conference (CAS), Romania, 2023"
+        
         
       - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
         link: "https://arxiv.org/search/?query=Nitish+shukla&searchtype=all&source=header"
         authors: Nitish Shukla
         conference: IEEE International Joint Conference on Biometrics(IJCB) ADMA-2023
 
-      - title: Mixed-Type Wafer Classification For Low Memory Devices Using Knowledge Distillation
-        link: "https://arxiv.org/abs/2303.13974"
-        authors: Nitish Shukla, Anurima Dey, Srivatsan K.
-        conference: "Under Review, ICDDS-2023"
-
-      - title: Efficient Mixed-Type Wafer Defect Pattern Recognition Using Compact Deformable Convolutional Transformers
-        link: "https://arxiv.org/abs/2303.13827"
-        authors: Nitish Shukla
-        conference: "Under Review"
 
 
 
