@@ -8,7 +8,7 @@ sidebar:
 
     # Profile information
     name: Nitish Shukla
-    tagline: Data Scientist @ Micron
+    tagline: PhD CS @ MSU
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -54,9 +54,9 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      Hi, I am currently a Data Scientist at Micron. Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
+      Hi, I am currently PhDing at MSU working at [iPRoBe](https://iprobe.cse.msu.edu/index.php). Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
       [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
-      in DNNs induced by prototypes. 
+      of DNNs induced by prototypes. 
 
       My research interest mainly includes deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
       I am always looking to merge my application and theory interests and look at deep learning from interesting lenses.
@@ -69,8 +69,11 @@ education:
       # - degree: PhD in Computer Science
       #   university: University of Virginia
       #   time: Starting Fall 23
-
-      - degree: M.Sc. in Computer Science
+     - degree: PhD, Computer Science
+        university: Chennai Mathematical Institute
+        time: 2020 - 2022
+        
+      - degree: MSc, Computer Science
         university: Chennai Mathematical Institute
         time: 2020 - 2022
         # details: |
@@ -78,11 +81,11 @@ education:
        
         #     - Bullet point
         #     - Bullet point
-      - degree: M.Sc. in Mathematics
+      - degree: MSc, Mathematics
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
         
-      - degree: B.Sc. in Mathematics
+      - degree: BSc, Mathematics
         university: Kanpur University
         time: 2014 - 2017
 
