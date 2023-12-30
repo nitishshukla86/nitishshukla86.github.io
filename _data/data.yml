@@ -69,11 +69,11 @@ education:
       # - degree: PhD in Computer Science
       #   university: University of Virginia
       #   time: Starting Fall 23
-     - degree: PhD, Computer Science
+      - degree: "PhD, Computer Science"
         university: Chennai Mathematical Institute
         time: 2020 - 2022
         
-      - degree: MSc, Computer Science
+      - degree: "MSc, Computer Science"
         university: Chennai Mathematical Institute
         time: 2020 - 2022
         # details: |
@@ -81,11 +81,11 @@ education:
        
         #     - Bullet point
         #     - Bullet point
-      - degree: MSc, Mathematics
+      - degree: "MSc, Mathematics"
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
         
-      - degree: BSc, Mathematics
+      - degree: "BSc, Mathematics"
         university: Kanpur University
         time: 2014 - 2017
 
