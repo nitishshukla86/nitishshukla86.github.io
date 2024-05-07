@@ -12,7 +12,7 @@ sidebar:
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: "nitishshukla86@gmail.com \b shuklan3@msu.edu" 
+    email: "nitishshukla86@gmail.com \b \t shuklan3@msu.edu" 
     phone: (+1) 571-244-0024
     timezone: #America/Cancun Timezone
     citizenship: Indian
