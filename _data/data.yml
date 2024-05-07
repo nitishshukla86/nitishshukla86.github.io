@@ -54,15 +54,15 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      Greetings! I'm currently pursuing my Ph.D. at MSU working in [iPRoBe](https://iprobe.cse.msu.edu/index.php) lab.
+      Hi! I'm currently pursuing my Ph.D. at MSU working in [iPRoBe](https://iprobe.cse.msu.edu/index.php) lab.
       Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
-      [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
+      [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof. [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties
       of DNNs induced by prototypes. 
 
-      My research interest includes deep learning and explainability aspects of it. I am also interested in theoretical computer science, mainly graph theory.
+      My current research focuses on Facial Biometrics, specifically Morph Attach Detection (MAD) and Facial Demorphing. I am also interested in theoretical computer science, mainly graph theory.
       I'm continually seeking ways to integrate my application and theory interests, providing unique perspectives on deep learning.
 
-      Outside the academia, I find joy in cooking, watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
+      Outside the academia, I find joy in cooking ([My Instagram](https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr)), watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
 
 education:
     title: Education
@@ -132,9 +132,9 @@ experiences:
           company: Adobe Research
           details: |
             -Working with MDSR team.
-            
+
       - role: Data Scientist II
-        time: 2022 - Present
+        time: June 2022 - Aug 2023
         company: Micron Technology, Hyderabad
         details: |
           -Responsible for development and maintenance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
