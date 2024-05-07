@@ -94,6 +94,21 @@ publications:
     title: Publications
     intro: 
     papers:
+      - title: "Face Demorphing: Conditional Face Image Extraction From a Single Morph"
+        # link: "https://arxiv.org/abs/2304.04386"
+        authors: Nitish Shukla, Arun Ross
+        conference: Under Review
+
+      - title: Facial Demorphing via Identity Preserving Image Decomposition
+        # link: "https://arxiv.org/abs/2304.04386"
+        authors: Nitish Shukla, Arun Ross
+        conference: Under Review
+
+      - title: "SDeMorph++ : Extending to Unseen Faces"
+        # link: "https://arxiv.org/abs/2304.04386"
+        authors: Nitish Shukla, Arun Ross
+        conference: PrePrint
+
       - title: Generating Adversarial Attacks in the Latent Space 
         link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Sudipta Banerjee
@@ -112,6 +127,12 @@ publications:
 experiences:
     title: Experiences
     info:
+      - role: PhD Intern
+          time: May 2024 - Aug 2024
+          company: Adobe Research
+          details: |
+            -Working with MDSR team.
+            
       - role: Data Scientist II
         time: 2022 - Present
         company: Micron Technology, Hyderabad
