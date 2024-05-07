@@ -46,7 +46,7 @@ sidebar:
           link:
 
         - item: Cooking
-          link:
+          link: "https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr"
 
         - item: Video Games
           link:
@@ -62,14 +62,11 @@ career-profile:
       My current research focuses on Facial Biometrics, specifically Morph Attach Detection (MAD) and Facial Demorphing. I am also interested in theoretical computer science, mainly graph theory.
       I'm continually seeking ways to integrate my application and theory interests, providing unique perspectives on deep learning.
 
-      Outside the academia, I find joy in cooking ([My Instagram](https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr)), watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
+      Outside academia, I find joy in cooking ([My Instagram](https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr)), watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
 
 education:
     title: Education
     info:
-      # - degree: PhD in Computer Science
-      #   university: University of Virginia
-      #   time: Starting Fall 23
       - degree: "PhD, Computer Science"
         university: Michigan State University
         time: 2024 - Present
@@ -77,11 +74,7 @@ education:
       - degree: "MSc, Computer Science"
         university: Chennai Mathematical Institute
         time: 2020 - 2022
-        # details: |
-        #   Worked with Prof. [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) on tying knots between 
-       
-        #     - Bullet point
-        #     - Bullet point
+        
       - degree: "MSc, Mathematics"
         university: Indian Institute of Technology, Guwahati
         time: 2017 - 2019
@@ -97,25 +90,25 @@ publications:
       - title: "Face Demorphing: Conditional Face Image Extraction From a Single Morph"
         # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
-        conference: Under Review
+        conference: Under Review, 2024
 
-      - title: Facial Demorphing via Identity Preserving Image Decomposition
+      - title: "Facial Demorphing via Identity Preserving Image Decomposition"
         # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
-        conference: Under Review
+        conference: Under Review, 2024
 
       - title: "SDeMorph++ : Extending to Unseen Faces"
         # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
-        conference: PrePrint
+        conference: PrePrint, 2024
 
-      - title: Generating Adversarial Attacks in the Latent Space 
+      - title: "Generating Adversarial Attacks in the Latent Space "
         link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
         
         
-      - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
+      - title: "SDeMorph, Towards Better Facial Demorphing from Single Morph"
         link: 
         authors: Nitish Shukla
         conference: IEEE International Joint Conference on Biometrics(IJCB) ADMA-2023
@@ -137,7 +130,7 @@ experiences:
         time: June 2022 - Aug 2023
         company: Micron Technology, Hyderabad
         details: |
-          -Responsible for development and maintenance of a root cause identification pipeline capable of identifying defect causing steps in wafer development process.
+          -Responsible for the development and maintenance of a root cause identification pipeline capable of identifying defect-causing steps in the wafer development process.
 
           -Developed a synthetic data generation technique to generate visually realistic wafer images for fine-tuning.
 
@@ -146,7 +139,7 @@ experiences:
         time: 2019 - 2020
         company: Next Education India Pvt. Ltd., Hyderabad
         details: |
-          -Developed a handwriting recognition(HTR) system to produce transcript of notes written on electronic white board.
+          -Developed a handwriting recognition(HTR) system to produce transcripts of notes written on an electronic whiteboard.
       # - role: UI Developer
       #   time: 2012 - 2014
       #   company: Amazon, London
@@ -226,5 +219,5 @@ experiences:
 #       - name: Sketch & Photoshop
 #         level: 60%
 
-# footer: >
-#     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
