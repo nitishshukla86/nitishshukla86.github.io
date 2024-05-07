@@ -62,7 +62,7 @@ career-profile:
       My current research focuses on Facial Biometrics, specifically Morph Attach Detection (MAD) and Facial Demorphing. I am also interested in theoretical computer science, mainly graph theory.
       I'm continually seeking ways to integrate my application and theory interests, providing unique perspectives on deep learning.
 
-      Outside the academia, I find joy in cooking ([My Instagram](https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr)), watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
+      Outside academia, I find joy in cooking ([My Instagram](https://www.instagram.com/_the_doctor_chef_?igsh=aG5qeTlic3JrYTcx&utm_source=qr)), watching movies, and playing video games during my free time. Beyond that, I'm an enthusiastic hiker and hold a deep admiration for snowy mountains. If there's anything specific you'd like to discuss or share, feel free to contact me!
 
 education:
     title: Education
@@ -95,28 +95,24 @@ publications:
     intro: 
     papers:
       - title: "Face Demorphing: Conditional Face Image Extraction From a Single Morph"
-        # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
         conference: Under Review
 
-      - title: Facial Demorphing via Identity Preserving Image Decomposition
-        # link: "https://arxiv.org/abs/2304.04386"
+      - title: "Facial Demorphing via Identity Preserving Image Decomposition"
         authors: Nitish Shukla, Arun Ross
         conference: Under Review
 
       - title: "SDeMorph++ : Extending to Unseen Faces"
-        # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
         conference: PrePrint
 
-      - title: Generating Adversarial Attacks in the Latent Space 
+      - title: "Generating Adversarial Attacks in the Latent Space" 
         link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Sudipta Banerjee
         conference: GCV, CVPR-2023
         
         
-      - title: SDeMorph, Towards Better Facial Demorphing from Single Morph
-        link: 
+      - title: "SDeMorph, Towards Better Facial Demorphing from Single Morph"
         authors: Nitish Shukla
         conference: IEEE International Joint Conference on Biometrics(IJCB) ADMA-2023
 
