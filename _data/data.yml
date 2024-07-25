@@ -96,7 +96,7 @@ publications:
       - title: "Facial Demorphing via Identity Preserving Image Decomposition"
         # link: "https://arxiv.org/abs/2304.04386"
         authors: Nitish Shukla, Arun Ross
-        conference: Under Review, 2024
+        conference: IEEE International Joint Conference on Biometrics(IJCB) FMADT-2024
 
       - title: "SDeMorph++ : Extending to Unseen Faces"
         # link: "https://arxiv.org/abs/2304.04386"
