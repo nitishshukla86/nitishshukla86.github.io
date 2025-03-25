@@ -269,8 +269,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Shukla]
+  first_name: [Nitish]
 
   style: apa
   locale: en
@@ -626,7 +626,7 @@ third_party_libraries:
 
 jekyll_get_json:
   - data: resume
-    json: assets/json/resume.json # it can also be an url
+    json: assets/json/resume2.json # it can also be an url
 
 jsonresume:
   - basics
