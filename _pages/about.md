@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>2335, Engineering Building</p>
-    <p>123 Michigan State University</p>
+    <p>Michigan State University</p>
     <p>East Lansing, MI, 48864</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
