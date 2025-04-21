@@ -391,7 +391,7 @@ ninja.data = [{
           title: 'Paper titled “Face Demorphing via Identity Preserving Image Decomposition” accepted at IEEE IJCB...',
           description: "",
           section: "News",},{id: "news-started-summer-internship-at-adobe-research",
-          title: 'Started summer internship at Adobe Research',
+          title: 'Started summer internship at Adobe Research.',
           description: "",
           section: "News",},{id: "news-paper-titled-metric-for-evaluating-performance-of-reference-free-demorphing-methods-accepted-at-map-a-wacv-2025",
           title: 'Paper titled “Metric for Evaluating Performance of Reference-Free Demorphing Methods” accepted at MAP-A,...',
