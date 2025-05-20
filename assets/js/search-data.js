@@ -402,6 +402,9 @@ ninja.data = [{
           section: "News",},{id: "news-started-summer-internship-at-adobe-research",
           title: 'Started summer internship at Adobe Research. 🎊',
           description: "",
+          section: "News",},{id: "news-paper-titled-diffdemorph-extending-reference-free-demorphing-to-unseen-faces-accepted-at-ieee-international-conference-on-image-processing-icip-2025",
+          title: 'Paper titled “diffDemorph: Extending Reference-Free Demorphing to Unseen Faces” accepted at IEEE International...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
