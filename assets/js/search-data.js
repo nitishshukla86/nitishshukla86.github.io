@@ -405,6 +405,9 @@ ninja.data = [{
           section: "News",},{id: "news-paper-titled-diffdemorph-extending-reference-free-demorphing-to-unseen-faces-accepted-at-ieee-international-conference-on-image-processing-icip-2025",
           title: 'Paper titled “diffDemorph: Extending Reference-Free Demorphing to Unseen Faces” accepted at IEEE International...',
           description: "",
+          section: "News",},{id: "news-paper-titled-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan-accepted-at-ieee-international-joint-conference-on-biometrics-ijcb-2025",
+          title: 'Paper titled “Facial Demorphing from a Single Morph Using a Latent Conditional GAN”...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
