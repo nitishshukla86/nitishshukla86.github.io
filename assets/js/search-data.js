@@ -408,6 +408,9 @@ ninja.data = [{
           section: "News",},{id: "news-paper-titled-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan-accepted-at-ieee-international-joint-conference-on-biometrics-ijcb-2025",
           title: 'Paper titled “Facial Demorphing from a Single Morph Using a Latent Conditional GAN”...',
           description: "",
+          section: "News",},{id: "news-awarded-iapr-best-biometrics-student-paper-award-bbspa-at-ieee-international-joint-conference-on-biometrics-ijcb-2025",
+          title: 'Awarded IAPR Best Biometrics Student Paper Award (BBSPA) at IEEE International Joint Conference...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
