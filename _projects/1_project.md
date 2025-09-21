@@ -13,7 +13,7 @@ A morph is created by combining two (or more) face images from two (or more) ide
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/ijcb2025.jpg" title="Overview of our proposed framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/ijcb2025.PNG" title="Overview of our proposed framework" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -40,7 +40,7 @@ A morph is created by combining two (or more) face images from two (or more) ide
 ## Results
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/ijcb2025-r1.pdf" title="Example 1" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/ijcb2025-r1.png" title="Example 1" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/ijcb2025-r2.png" title="Example 2" class="img-fluid rounded z-depth-1" %}
