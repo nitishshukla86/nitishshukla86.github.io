@@ -30,7 +30,7 @@ A morph is created by combining two (or more) face images from two (or more) ide
   <a href="https://github.com/nitishshukla86/Facial-Demorphing-from-a-Single-Morph-Using-a-Latent-Conditional-GAN" class="btn btn-dark btn-lg" role="button" target="_blank">
     💻 Code
   </a>
-  <a href="assets/slides/ijcb2025.pdf" class="btn btn-dark btn-lg" role="button" target="_blank">
+  <a href="assets/pdf/ijcb2025.pdf" class="btn btn-dark btn-lg" role="button" target="_blank">
     👨‍🏫 Slides
   </a>
 </div>
