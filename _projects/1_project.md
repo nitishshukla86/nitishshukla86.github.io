@@ -1,81 +1,65 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Facial Demorphing from a Single Morph Using a Latent Conditional GAN
+description: Paper
+img: assets/img/ijcb2025.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Abstract
+Facial demorphing aims to recover the underlying identities from a single morphed face image.  
+In this work, we propose a **Latent Conditional GAN** that learns to disentangle and reconstruct the original identities from the morph without requiring paired ground-truth images.  
+Our method leverages latent space conditioning, adversarial training, and identity-preserving constraints to achieve robust demorphing across multiple datasets.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/teaser.jpg" title="Overview of our proposed framework" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+    Overview of the proposed latent conditional GAN for facial demorphing.
+</div>
 
-{% endraw %}
+---
+
+## Resources
+<div class="mt-3">
+  <a href="assets/papers/demorphing_gan.pdf" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
+    📄 Paper
+  </a>
+  <a href="https://github.com/username/demorphing-gan" class="btn btn-dark btn-lg" role="button" target="_blank">
+    💻 Code
+  </a>
+</div>
+
+---
+
+## Results
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/result1.jpg" title="Example 1" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/result2.jpg" title="Example 2" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/result3.jpg" title="Example 3" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+    Example results: input morph (left), reconstructed identities (middle, right).
+</div>
+
+---
+
+## Citation
+If you use this work, please cite:
+```bibtex
+@inproceedings{shukla2025demorphing,
+  title={Facial Demorphing from a Single Morph Using a Latent Conditional GAN},
+  author={Shukla, Nitish and Others},
+  booktitle={International Joint Conference on Biometrics (IJCB)},
+  year={2025}
+}
