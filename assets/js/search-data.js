@@ -413,7 +413,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
           title: 'Facial Demorphing from a Single Morph Using a Latent Conditional GAN',
-          description: "Paper",
+          description: "Paper, IJCB 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{
