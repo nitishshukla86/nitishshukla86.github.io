@@ -55,7 +55,6 @@ Results: (Left) Demorphing outcomes across six different morphing techniques. (R
 ## Citation
 If you use this work, please cite:
 
----
 @inproceedings{shukla2025demorphing,
   title={Facial Demorphing from a Single Morph Using a Latent Conditional GAN},
   author={Shukla, Nitish and Others},
