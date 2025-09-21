@@ -26,7 +26,7 @@ Our method leverages latent space conditioning, adversarial training, and identi
 
 ## Resources
 <div class="mt-3">
-  <a href="assets/papers/demorphing_gan.pdf" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
+  <a href="https://arxiv.org/pdf/2507.18566" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
     📄 Paper
   </a>
   <a href="https://github.com/username/demorphing-gan" class="btn btn-dark btn-lg" role="button" target="_blank">
