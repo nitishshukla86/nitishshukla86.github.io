@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Facial Demorphing from a Single Morph Using a Latent Conditional GAN
-description: Paper, IJCB 2025
-img: assets/img/ijcb2025.jpg
+description: Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)
+img: assets/img/ijcb2025.png
 importance: 1
 category: work
 related_publications: true
@@ -17,7 +17,7 @@ A morph is created by combining two (or more) face images from two (or more) ide
   </div>
 </div>
 <div class="caption">
-    Proposed Demorphing Architecture: An encoder, compresses the morph along with the constituent face images during training. The generator, G, reconstructs two face images conditioned on the morph in the encoder's latent domain. The discriminator distinguishes between real and synthesized face feature triplets. During inference, a decompressor, recovers the constituent images. Note that the decoder, is used only during inference to decompress the demorphed outputs
+    Proposed Demorphing Architecture: An encoder, compresses the morph along with the constituent face images during training. The generator, G, reconstructs two face images conditioned on the morph in the encoder's latent domain. The discriminator distinguishes between real and synthesized face feature triplets. During inference, a decompressor, recovers the constituent images. Note that the decoder, is used only during inference to decompress the demorphed outputs.
 </div>
 
 ---
@@ -49,6 +49,17 @@ A morph is created by combining two (or more) face images from two (or more) ide
 </div>
 <div class="caption">
 Results: (Left) Demorphing outcomes across six different morphing techniques. (Right) Comparison to current state-of-the-art methods.
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/ijcb2025-results.png" title="Example 1" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+Results: Comparison of our method with the existing state-of-the-art demorphing techniques under a unified protocol. Our method outperforms IPD, SDeMorph  and Face Demorphing . We assess our method using established image decomposition IQA metrics (PSNR/SSIM), demorphing metrics (Restoration Accuracy), and biometrically-weighted IQA (BW). 
 </div>
 
 ---
