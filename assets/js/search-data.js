@@ -413,7 +413,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
           title: 'Facial Demorphing from a Single Morph Using a Latent Conditional GAN',
-          description: "Paper, IJCB 2025",
+          description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/latent_conditional_gan/";
             },},{
