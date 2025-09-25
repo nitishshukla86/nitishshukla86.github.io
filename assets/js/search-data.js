@@ -413,7 +413,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-dc-gan-dual-conditioned-gan-for-face-demorphing-from-a-single-morph",
           title: 'dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph',
-          description: "Paper, FG 2025",
+          description: "Nitish Shukla, Arun Ross; In Proceedings of 19th International Conference on Automatic Face and Gesture Recognition (FG 2025)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dcGAN/";
             },},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
