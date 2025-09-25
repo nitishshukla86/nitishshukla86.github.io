@@ -411,7 +411,12 @@ ninja.data = [{
           section: "News",},{id: "news-awarded-iapr-best-biometrics-student-paper-award-bbspa-at-ieee-international-joint-conference-on-biometrics-ijcb-2025",
           title: 'Awarded IAPR Best Biometrics Student Paper Award (BBSPA) at IEEE International Joint Conference...',
           description: "",
-          section: "News",},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
+          section: "News",},{id: "projects-dc-gan-dual-conditioned-gan-for-face-demorphing-from-a-single-morph",
+          title: 'dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph',
+          description: "Paper, FG 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dcGAN/";
+            },},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
           title: 'Facial Demorphing from a Single Morph Using a Latent Conditional GAN',
           description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)",
           section: "Projects",handler: () => {
