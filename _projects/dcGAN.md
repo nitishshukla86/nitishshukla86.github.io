@@ -30,10 +30,7 @@ Dual-Conditioned GAN for Reference-Free Demorphing: An image encoder, E, encodes
   <a href="https://github.com/nitishshukla86/dcGAN" class="btn btn-dark btn-lg" role="button" target="_blank">
     💻 Code
   </a>
-<a href="assets/pdf/fg2025.pdf" class="btn btn-dark btn-lg" role="button" target="_blank"
-   onclick="if(!this.href.endsWith('.pdf')) { alert('PDF file missing!'); return false; }">
-  👨‍🏫 Slides
-</a>
+
 </div>
 
 ---
