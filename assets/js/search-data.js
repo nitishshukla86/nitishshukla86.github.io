@@ -416,11 +416,6 @@ ninja.data = [{
           description: "Nitish Shukla, Arun Ross; In Proceedings of 19th International Conference on Automatic Face and Gesture Recognition (FG 2025)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dcGAN/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/diffDemorph/";
             },},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
           title: 'Facial Demorphing from a Single Morph Using a Latent Conditional GAN',
           description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)",
