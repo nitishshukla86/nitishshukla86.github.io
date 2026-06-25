@@ -18,14 +18,14 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "",
+          description: "Selected research projects in face demorphing, biometric security, and multimodal large language models.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "",
+          description: "PhD Student, Computer Vision &amp;amp; Multimodal Learning — Michigan State University",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -416,14 +416,44 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-dc-gan-dual-conditioned-gan-for-face-demorphing-from-a-single-morph",
           title: 'dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph',
-          description: "Nitish Shukla, Arun Ross; In Proceedings of 19th International Conference on Automatic Face and Gesture Recognition (FG 2025)",
+          description: "Nitish Shukla, Arun Ross; In Proceedings of 19th IEEE FG 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dcGAN/";
+            },},{id: "projects-a-metric-for-evaluating-reference-free-demorphing-methods",
+          title: 'A Metric for Evaluating Reference-Free Demorphing Methods',
+          description: "Nitish Shukla, Arun Ross; In Proceedings of WACV Workshops (WACVW 2025)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/demorph_metric/";
+            },},{id: "projects-diffdemorph-extending-reference-free-demorphing-to-unseen-faces",
+          title: 'diffDeMorph - Extending Reference-Free Demorphing to Unseen Faces',
+          description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE ICIP 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/diffdemorph/";
+            },},{id: "projects-facial-demorphing-via-identity-preserving-image-decomposition",
+          title: 'Facial Demorphing via Identity Preserving Image Decomposition',
+          description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE IJCB 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/identity_preserving_decomposition/";
             },},{id: "projects-facial-demorphing-from-a-single-morph-using-a-latent-conditional-gan",
           title: 'Facial Demorphing from a Single Morph Using a Latent Conditional GAN',
-          description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)",
+          description: "Nitish Shukla, Arun Ross; In Proceedings of IEEE IJCB 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/latent_conditional_gan/";
+            },},{id: "projects-enhancing-single-image-facial-demorphing-using-multimodal-llms",
+          title: 'Enhancing Single-Image Facial Demorphing using Multimodal LLMs',
+          description: "Nitish Shukla, Arun Ross; Under review, arXiv 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm_demorph/";
+            },},{id: "projects-s2h-dpo-hardness-aware-preference-optimization-for-vision-language-models",
+          title: 'S2H-DPO - Hardness-Aware Preference Optimization for Vision–Language Models',
+          description: "Nitish Shukla, Surgan Jandial, Arun Ross; Findings of ACL 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/s2h_dpo/";
+            },},{id: "projects-sdemorph-towards-better-facial-de-morphing-from-a-single-morph",
+          title: 'SDeMorph - Towards Better Facial De-morphing from a Single Morph',
+          description: "Nitish Shukla; In Proceedings of IEEE IJCB 2023",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sdemorph/";
             },},{
         id: 'social-email',
         title: 'email',
