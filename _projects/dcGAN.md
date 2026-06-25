@@ -1,36 +1,59 @@
 ---
 layout: page
 title: dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph
-description: Nitish Shukla, Arun Ross; In Proceedings of 19th International Conference on Automatic Face and Gesture Recognition (FG 2025)
+description: Nitish Shukla, Arun Ross; In Proceedings of 19th IEEE FG 2025
 img: assets/img/fg2025.png
-importance: 2
+importance: 5
 category: work
 related_publications: true
 ---
 
-## Abstract
-A facial morph is an image strategically created by combining two face images pertaining to two distinct identities. The goal is to create a face image that can be matched to two different identities by a face matcher. Face demorphing inverts this process and attempts to recover the original images constituting a facial morph. Existing demorphing techniques have two major limitations: (a) they assume that some identities are common in the train and test sets; and (b) they are prone to the morph replication problem, where the outputs are merely replicates of the input morph. In this paper, we overcome these issues by proposing dc-GAN (dual-conditioned GAN), a novel demorphing method conditioned on the morph image as well as the embedding extracted from the image. Our method overcomes the morph replication problem and produces high-fidelity reconstructions of the constituent images. Moreover, the proposed method is highly generalizable and applicable to both reference-based and reference-free demorphing methods. Experiments were conducted using the AMSL, FRLL-Morphs, and MorDiff datasets to demonstrate the efficacy of the method.
+## Research Goal
+Existing demorphers assume some identities are shared between train and test sets, and tend
+to merely replicate the morph. This work removes the shared-identity assumption and is the
+first to overcome morph-replication when **test morphs use entirely unseen identities**
+(the hardest "scenario 3"), in both reference-free and reference-based settings.
+
+## How it works
+- **Dual conditioning.** A UNet generator is conditioned on (i) the morph image in the
+  *image* domain and (ii) the morph embedding $\mathcal{E}(x)$ injected into its
+  *latent* layers — giving far richer guidance than the morph image alone.
+- **Conditioned discriminator.** The discriminator also sees the morph, distinguishing a
+  *real* triplet (morph, BF1, BF2) from a *fake* one (morph, OUT1, OUT2). The two
+  conditions work in tandem to suppress morph-replication.
+- **Cross-road loss** aligns the unordered generator outputs with the ordered ground-truth
+  faces. For reference-based (differential) demorphing, the encoder simply takes the morph
+  *and* a reference image (6-channel input).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/fg2025.png" title="Overview of our proposed framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/dcgan_arch.png" title="dc-GAN architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-Dual-Conditioned GAN for Reference-Free Demorphing: An image encoder, E, encodes the morph image, which is then used to condition the generator. The generator, based on a UNet architecture, G, takes in the MORPH image and the encoded representation, E(MORPH), producing two outputs, OUT1 and OUT2. The discriminator is trained to distinguish between the real set (MORPH, BF1, BF2) and the synthetic set (MORPH, OUT1, OUT2), differentiating real from synthetic pairs.
+An image encoder embeds the morph to condition a UNet generator (alongside the morph
+image); the discriminator separates real from synthetic (morph, face, face) triplets.
 </div>
+
+## Key results
+- **93.86%** average TMR on AMSL (ArcFace), **+23.32%** over the prior GAN baseline;
+  strong TMR across OpenCV (93.99%), WebMorph (89.87%), FaceMorpher (94.39%), MorDiff
+  (93.75%).
+- Wins decisively in scenario 3 (unseen identities) while staying competitive in scenario 1.
+- **Ablations:** removing the cross-road loss drops performance **−20.87%**; removing the
+  embedding condition $\mathcal{E}$ drops it **−8.57%** — both conditions matter.
+- Reference-based (differential) demorphing reaches **94.88%** TMR on AMSL.
 
 ---
 
 ## Resources
 <div class="mt-3">
-  <a href="https://arxiv.org/pdf/2411.14494?" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
+  <a href="https://arxiv.org/abs/2411.14494" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
     📑 Paper
   </a>
   <a href="https://github.com/nitishshukla86/dcGAN" class="btn btn-dark btn-lg" role="button" target="_blank">
     💻 Code
   </a>
-
 </div>
 
 ---
@@ -38,18 +61,13 @@ Dual-Conditioned GAN for Reference-Free Demorphing: An image encoder, E, encodes
 ## Citation
 If you use this work, please cite:
 {% raw %}
-```html
-@INPROCEEDINGS{11099072,
+```bibtex
+@INPROCEEDINGS{shukla2025dcgan,
   author={Shukla, Nitish and Ross, Arun},
-  booktitle={2025 IEEE 19th International Conference on Automatic Face and Gesture Recognition (FG)}, 
-  title={dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph}, 
+  booktitle={2025 IEEE 19th International Conference on Automatic Face and Gesture Recognition (FG)},
+  title={dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph},
   year={2025},
-  volume={},
-  number={},
   pages={1-9},
-  keywords={Face recognition;Gesture recognition;Image reconstruction},
   doi={10.1109/FG61629.2025.11099072}}
-
 ```
 {% endraw %}
----

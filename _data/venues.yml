@@ -1,9 +1,27 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
+
+"ACL":
+  url: https://aclanthology.org/
+  color: "#b31b1b"
+
+"IJCB":
+  url: https://ieee-biometrics.org/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICIP":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings
+  color: "#1f6feb"
 
-"Vision":
+"FG":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000048/all-proceedings
+  color: "#0b7261"
+
+"WACVW":
+  url: https://wacv.thecvf.com/
+  color: "#7a4fb5"
+
+"CVPRW":
+  url: https://openaccess.thecvf.com/
   color: "#009f36"

@@ -1,30 +1,57 @@
 ---
 layout: page
 title: Facial Demorphing from a Single Morph Using a Latent Conditional GAN
-description: Nitish Shukla, Arun Ross; In Proceedings of IEEE International Joint Conference on Biometrics (IJCB 2025)
-img: assets/img/ijcb2025.png
-importance: 1
+description: Nitish Shukla, Arun Ross; In Proceedings of IEEE IJCB 2025
+img: assets/img/ijcb2025.PNG
+importance: 3
 category: work
 related_publications: true
 ---
 
-## Abstract
-A morph is created by combining two (or more) face images from two (or more) identities to create a composite image that is highly similar to all constituent identities, allowing the forged morph to be biometrically associated with more than one individual. Morph Attack Detection (MAD) can be used to detect a morph, but does not reveal the constituent images. Demorphing - the process of deducing the constituent images - is thus vital to provide additional evidence about a morph. Existing demorphing methods suffer from the morph replication problem, where the outputs tend to look very similar to the morph itself, or assume that train and test morphs are generated using the same morph technique. The proposed method overcomes these issues. The method decomposes a morph in latent space allowing it to demorph images created from unseen morph techniques and face styles. We train our method on morphs created from synthetic faces and test on morphs created from real faces using different morph techniques. Our method outperforms existing  methods by a considerable margin and produces high fidelity  demorphed face images.
+> 🏆 **IAPR Best Biometrics Student Paper Award (BBSPA)**, IEEE IJCB 2025.
+
+## Research Goal
+Demorphing methods often suffer the *morph-replication problem* — both outputs end up
+looking like the input morph — or assume train and test morphs share the same morphing
+technique. This work demorphs in a **compressed latent space**, recovering constituent
+faces from morphs made with unseen techniques and face styles, at high resolution.
+
+## How it works
+- **Perceptual compression.** A *frozen* Stable-Diffusion KL-autoencoder maps a
+  512×512 morph to a 64×64×4 latent, stripping away distractors (background, lighting,
+  morph artifacts) and making training/inference far cheaper.
+- **Conditional GAN in latent space.** An image-to-image generator conditioned on the
+  encoded morph demorphs in the latent domain; a discriminator separates real vs.
+  synthetic *triplets* (encoded morph + two faces). Computing losses in latent space
+  avoids penalizing irrelevant RGB differences.
+- **Kurtosis loss against replication.** Beyond adversarial + $\mathcal{L}_1$ losses, a
+  kurtosis term aligns the higher-order statistics of outputs and ground truth, preventing
+  the "average face" trivial solution that plagues passport-style morphs.
+- **Order-robust training.** Outputs are explicitly ordered but ground-truth pairs are
+  randomly swapped, exposing the model to both orderings with a simple per-pixel loss.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/ijcb2025.PNG" title="Overview of our proposed framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/ijcb2025.PNG" title="Latent conditional GAN architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-    Proposed Demorphing Architecture: An encoder, compresses the morph along with the constituent face images during training. The generator, G, reconstructs two face images conditioned on the morph in the encoder's latent domain. The discriminator distinguishes between real and synthesized face feature triplets. During inference, a decompressor, recovers the constituent images. Note that the decoder, is used only during inference to decompress the demorphed outputs.
+A frozen encoder compresses the morph; a conditional GAN demorphs in latent space and a
+decoder reconstructs the two constituent faces at inference.
 </div>
+
+## Key results
+- **97.77%** TMR@10%FMR on AMSL (ArcFace), versus 70.55% for the prior GAN baseline.
+- Outperforms SDeMorph and Identity-Preserving Decomposition across all datasets on TMR,
+  Restoration Accuracy, IQA, and the biometrically cross-weighted BW-IQA metric.
+- **Live human study** (17 images, 8 subjects, 28 morphs): 95.65% RA with AdaFace,
+  91.30% with ArcFace — confirming the method works beyond benchmark morphs.
 
 ---
 
 ## Resources
 <div class="mt-3">
-  <a href="https://arxiv.org/pdf/2507.18566" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
+  <a href="https://arxiv.org/abs/2507.18566" class="btn btn-primary btn-lg mr-2" role="button" target="_blank">
     📑 Paper
   </a>
   <a href="https://github.com/nitishshukla86/Facial-Demorphing-from-a-Single-Morph-Using-a-Latent-Conditional-GAN" class="btn btn-dark btn-lg" role="button" target="_blank">
@@ -44,18 +71,18 @@ A morph is created by combining two (or more) face images from two (or more) ide
   </div>
 </div>
 <div class="caption">
-Results: (Left) Demorphing outcomes across six different morphing techniques. (Right) Comparison to current state-of-the-art methods.
+(Left) Demorphing outcomes across six morphing techniques. (Right) Comparison with the
+state of the art under a unified protocol.
 </div>
-
-
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/ijcb2025-results.png" title="Example 1" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/ijcb2025-results.png" title="Quantitative comparison" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-Results: Comparison of our method with the existing state-of-the-art demorphing techniques under a unified protocol. Our method outperforms IPD, SDeMorph  and Face Demorphing . We assess our method using established image decomposition IQA metrics (PSNR/SSIM), demorphing metrics (Restoration Accuracy), and biometrically-weighted IQA (BW). 
+Evaluated with IQA (PSNR/SSIM), Restoration Accuracy, and biometrically-weighted IQA (BW);
+our method outperforms IPD, SDeMorph, and Face Demorphing.
 </div>
 
 ---
@@ -63,13 +90,12 @@ Results: Comparison of our method with the existing state-of-the-art demorphing 
 ## Citation
 If you use this work, please cite:
 {% raw %}
-```html
-@inproceedings{shukla2025demorphing,
+```bibtex
+@inproceedings{shukla2025lcgan,
   title={Facial Demorphing from a Single Morph Using a Latent Conditional GAN},
-  author={Shukla, Nitish and Others},
-  booktitle={International Joint Conference on Biometrics (IJCB)},
+  author={Shukla, Nitish and Ross, Arun},
+  booktitle={IEEE International Joint Conference on Biometrics (IJCB)},
   year={2025}
 }
 ```
 {% endraw %}
----

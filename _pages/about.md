@@ -13,7 +13,7 @@ profile:
     <p>Michigan State University</p>
     <p>East Lansing, MI, 48864</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -28,9 +28,9 @@ latest_posts:
 ---
 
 
-   Ph.D. student at Michigan State University in [iPRoBe](https://iprobe.cse.msu.edu/index.php) lab with [Prof. Arun Ross](https://engineering.msu.edu/faculty/Arun-Ross).
+   Ph.D. student at Michigan State University in the [iPRoBe](https://iprobe.cse.msu.edu/index.php) lab with [Prof. Arun Ross](https://engineering.msu.edu/faculty/Arun-Ross).
 
-My current research focuses on facial demorphing and preference optimization in multimodal large language models (MLLMs). In particular, my current research addresses two core questions:  *(a) how to optimize MLLMs for multi-image contexts without relying on extensive human annotations,* and   *(b) how to leverage MLLMs to learn richer representations that improve performance on downstream retrieval tasks.*
+My research lies at the intersection of **representation learning** and **model reliability**, with a focus on how neural systems encode, reason over, and sometimes fail to disentangle fine-grained visual information in security-critical settings. Concretely, I work on **generative face demorphing** — recovering the constituent identities hidden inside a face morph using diffusion and GAN-based models, benchmarks, and evaluation protocols — and on **multimodal large language models (MLLMs)**. For MLLMs, my work addresses two core questions: *(a) how to optimize MLLMs for multi-image contexts without relying on extensive human annotations,* and *(b) how to leverage MLLMs to learn richer representations that improve performance on downstream retrieval and generation tasks.*
 
   Before that, I studied M.Sc. Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in) and M.Sc. Mathematics at
   [IIT Guwahati](https://www.iitg.ac.in). At CMI, I worked with Prof. [KV](https://www.cmi.ac.in/~kv/) and [Madhavan Mukund](https://www.cmi.ac.in/~madhavan/) studying the robustness properties

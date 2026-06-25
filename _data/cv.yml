@@ -3,73 +3,155 @@
   contents:
     - name: Full Name
       value: Nitish Shukla
-    - name: Date of Birth
-      value: 15th July 1997
+    - name: Position
+      value: PhD Student, Computer Science (Computer Vision &amp; Multimodal Learning)
+    - name: Affiliation
+      value: iPRoBe Lab, Michigan State University
+    - name: Email
+      value: shuklan3@msu.edu
     - name: Languages
       value: English, Hindi
+
+- title: Research Overview
+  type: list
+  contents:
+    - My research lies at the intersection of representation learning and model reliability
+      in deep learning, with a focus on how complex neural systems encode, reason over, and
+      sometimes fail to disentangle fine-grained visual information in security-critical
+      settings. I study how multimodal large language models (MLLMs) encode and reason over
+      facial information, analyze failure modes in multi-image reasoning, and leverage
+      internal representations for robust visual inference. A central theme of my work is
+      generative face demorphing and biometric verification, where I develop diffusion-based
+      inpainting models, benchmarks, and evaluation protocols that improve both face
+      recognition accuracy and downstream morph attack detection.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD, Computer Science
-      institution: Michigan State University
-      year: 2024-Present
+    - title: PhD in Computer Science
+      institution: Michigan State University, MI, USA
+      year: 2024 - Present
       description:
-        - Working with Prof. Arun Ross on single-image facial demorphing.
-    - title: MSc, Computer Science
-      institution: Chennai Mathematical Institute (CMI)
-      year: 2020-2022    
-    - title: MSc, Mathematics
-      institution: Indian Institute of Technology, Guwahati (IIT-G)
-      year: 2014-2017
+        - Advised by Prof. Arun Ross in the iPRoBe Lab.
+        - Face demorphing, biometric security, and multimodal large language models.
+    - title: MSc in Computer Science
+      institution: Chennai Mathematical Institute (CMI), Chennai, India
+      year: 2020 - 2022
+      description:
+        - Studied robustness properties of DNNs induced by prototypes with Prof. K. V. Subramanyam and Prof. Madhavan Mukund.
+    - title: MSc in Mathematics
+      institution: Indian Institute of Technology (IIT) Guwahati, India
+      year: 2017 - 2019
+    - title: BSc in Physics, Mathematics and Computer Applications
+      institution: Kanpur University, India
+      year: 2014 - 2017
 
 - title: Experience
   type: time_table
   contents:
-    - title: PhD Intern
-      institution: Adobe Systems
-      year: 2024
+    - title: PhD Research Intern
+      institution: Adobe Research
+      year: May 2025 - Aug 2025
+      description:
+        - Developed an attribute-aware style validation framework using zero-shot MLLM-induced embeddings for fine-grained artistic style analysis and retrieval.
+        - Proposed an attribute-based image decomposition strategy with FAISS-backed vector search that improved Recall@K by 2–3% over baseline representations. (Manuscript under review.)
     - title: Data Scientist II
       institution: Micron Technology
-      year: 2022-2023
+      year: Aug 2022 - Aug 2023
       description:
-
+        - Designed a synthetic data generation pipeline in Python and PyTorch to fine-tune a proprietary defect segmentation system for semiconductor die inspection.
+        - Synthetic augmentation improved defect shape mIoU by 9%, enabling robust detection of rare failure modes.
     - title: Research and Development Engineer
       institution: Next Education India Pvt. Ltd.
-      year: 2019-2020
+      year: 2019 - 2020
 
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - IAPR Best Biometrics Student Paper Award (BBSPA), IEEE International Joint Conference on Biometrics (IJCB) 2025.
 
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+- title: Ongoing Research Projects
+  type: time_table
+  contents:
+    - title: Enhancing Single-Image Facial Demorphing using MLLMs
+      year: 2026
+      description:
+        - Leveraged MLLM-derived semantic embeddings of morphs to condition a custom diffusion-based inpainting model, achieving 2–3% improvement in face recognition and biometric verification accuracy over baseline demorphing. (Under review, T-PAMI.)
+    - title: Style-Aware Open-Set Image Retrieval via MLLMs
+      year: 2025
+      description:
+        - Introduced an open-set image retrieval framework leveraging zero-shot MLLM reasoning and attention to extract attribute-disentangled embeddings (brushstrokes, color palette, composition) via contrastive learning, achieving 2–3% mAP gains without supervised fine-tuning. (Under review.)
+    - title: Recursive Visual Pruning for Efficient Multi-Image Reasoning
+      year: 2026
+      description:
+        - Designed an attention-guided recursive visual token pruning framework for vision-language models that reduces visual context via per-image budget allocation, enabling efficient multi-image inference without sacrificing reasoning accuracy. (In preparation.)
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items:
-#         - Nobel Prize in Physics
-#         - Matteucci Medal
-#     - year: 2029
-#       items:
-#         - Max Planck Medal
+- title: Selected Publications
+  type: time_table
+  contents:
+    - title: "S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models"
+      year: 2026
+      description:
+        - "Nitish Shukla, Surgan Jandial, Arun Ross. Findings of the Association for Computational Linguistics (ACL)."
+    - title: Facial Demorphing from a Single Morph Using a Latent Conditional GAN
+      year: 2025
+      description:
+        - "Nitish Shukla, Arun Ross. IEEE IJCB. IAPR Best Biometrics Student Paper Award."
+    - title: "diffDeMorph: Extending Reference-Free Demorphing to Unseen Faces"
+      year: 2025
+      description:
+        - "Nitish Shukla, Arun Ross. IEEE ICIP."
+    - title: "dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph"
+      year: 2025
+      description:
+        - "Nitish Shukla, Arun Ross. IEEE FG."
+    - title: Metric for Evaluating Performance of Reference-Free Demorphing Methods
+      year: 2025
+      description:
+        - "Nitish Shukla, Arun Ross. IEEE/CVF WACV Workshops."
+    - title: Facial Demorphing via Identity Preserving Image Decomposition
+      year: 2024
+      description:
+        - "Nitish Shukla, Arun Ross. IEEE IJCB."
+    - title: Generating Adversarial Attacks in the Latent Space
+      year: 2023
+      description:
+        - "Nitish Shukla, Sudipta Banerjee. IEEE/CVF CVPR Workshops."
+    - title: "SDeMorph: Towards Better Facial De-morphing from Single Morph"
+      year: 2023
+      description:
+        - "Nitish Shukla. IEEE IJCB."
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items:
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Languages &amp; Frameworks
+      items:
+        - Python, PyTorch, OpenCV, HuggingFace Transformers, Scikit-learn
+    - title: Computer Vision
+      items:
+        - Face recognition, liveness detection, biometric verification, face demorphing, morph attack detection, image retrieval, inpainting
+    - title: Deep Learning
+      items:
+        - GANs, diffusion models, vision transformers (ViT), attention mechanisms, contrastive learning, few-shot learning, fine-tuning, RLHF, preference optimization
+    - title: Multimodal Models
+      items:
+        - CLIP, MLLMs, vision-language representation learning, zero-shot reasoning
+    - title: Search &amp; Retrieval
+      items:
+        - FAISS, vector search, embedding-based retrieval
+    - title: Experimentation
+      items:
+        - MLflow, Pandas, large-scale benchmarking
+    - title: Mathematics
+      items:
+        - Bayesian methods, graph theory, linear algebra
 
-# - title: Other Interests
-#   type: list
-#   contents:
-#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+- title: References
+  type: list
+  contents:
+    - Arun Ross (Michigan State University) — rossarun@msu.edu
+    - K. V. Subramanyam (Chennai Mathematical Institute) — kv@cmi.ac.in
+    - Sudipta Banerjee (University of Wyoming) — sbanerj3@uwyo.edu

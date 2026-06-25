@@ -4,8 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf # you can also use external links here
-description: 
+description: PhD Student, Computer Vision &amp; Multimodal Learning — Michigan State University
 toc:
   sidebar: left
 ---

@@ -1,97 +1,124 @@
+---
+---
 
-@INPROCEEDINGS{ijcb2025,
+@article{shukla2026llmdemorph,
+  abbr={arXiv},
+  title={Enhancing Single-Image Facial Demorphing using Multimodal Large Language Models},
   author={Shukla, Nitish and Ross, Arun},
-  booktitle={Proceedings of the Findings of the Association for Computational Linguistics (ACL)}, 
-  title={S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models}, 
+  journal={arXiv preprint arXiv:2605.25442},
   year={2026},
-  volume={},
-  number={},
-  pages={1-10},
-  }
-
-
-@INPROCEEDINGS{icip2025,
-  author={Shukla, Nitish and Ross, Arun},
-  booktitle={IEEE International Conference on Image Processing (ICIP)}, 
-  title={diffDemorph: Extending Reference-Free Demorphing to Unseen Faces}, 
-  year={2025},
-  volume={},
-  number={},
-  pages={1-10},
-  keywords={Accuracy;Corporate acquisitions;Face recognition;Image decomposition;Security;Data mining;Image reconstruction},
-  doi={10.1109/IJCB62174.2024.10744431}}
-
-
-@INPROCEEDINGS{ijcb2025,
-  author={Shukla, Nitish and Ross, Arun},
-  booktitle={IEEE International Joint Conference on Biometrics (IJCB)}, 
-  title={Facial Demorphing from a Single Morph Using a Latent Conditional GAN}, 
-  year={2025},
-  volume={},
-  number={},
-  pages={1-10},
-  keywords={Accuracy;Corporate acquisitions;Face recognition;Image decomposition;Security;Data mining;Image reconstruction},
-  doi={10.1109/IJCB62174.2024.10744431}}
-
-
-
-
-
-
-@InProceedings{Shukla_2025_WACV,
-    author    = {Shukla, Nitish and Ross, Arun},
-    title     = {Metric for Evaluating Performance of Reference-Free Demorphing Methods},
-    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV) Workshops},
-    month     = {February},
-    year      = {2025},
-    pages     = {1670-1676}
-}
-@INPROCEEDINGS{shukla2024dcgandualconditionedganface,
-  author={Shukla, Nitish and Ross, Arun},
-  booktitle={IEEE International Conference on Automatic Face and Gesture Recognition (FG)}, 
-  title={dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph}, 
-  year={2025},
-  volume={},
-  number={}
+  arxiv={2605.25442},
+  preview={llmdemorph_arch.png},
+  abstract={A reference-free facial demorphing framework that leverages Multimodal Large Language Models (MLLMs) to guide a coupled diffusion-based reconstruction. Semantic embeddings extracted from intermediate MLLM layers condition the demorphing, providing high-level reasoning about facial attributes and identity cues that complement low-level pixel information. Both constituent faces are synthesized jointly through a denoising diffusion model operating directly in the RGB domain. The method achieves restoration accuracies exceeding 96% at 0.1% FMR on landmark-based morphs, with PSNR gains of 6--9 dB over existing methods.},
+  selected={true},
+  bibtex_show={true}
 }
 
+@inproceedings{shukla2026s2hdpo,
+  abbr={ACL},
+  title={S2H-DPO: Hardness-Aware Preference Optimization for Vision--Language Models},
+  author={Shukla, Nitish and Jandial, Surgan and Ross, Arun},
+  booktitle={Findings of the Association for Computational Linguistics (ACL)},
+  year={2026},
+  preview={s2hdpo_main.png},
+  abstract={A Simple-to-Hard (S2H) learning framework that systematically constructs multi-image preference data across three hierarchical reasoning levels: single-image localized reasoning, multi-image localized comparison, and global visual search. Unlike prior work relying on model-specific attributes such as hallucinations or attention heuristics, the approach leverages prompt-driven complexity to create chosen/rejected pairs applicable across different models. Evaluations on LLaVA and Qwen-VL show significant gains in multi-image reasoning while preserving single-image performance.},
+  html={https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pAedm2oAAAAJ&citation_for_view=pAedm2oAAAAJ:roLk4NBRz8UC},
+  selected={true},
+  bibtex_show={true}
+}
 
-
-@INPROCEEDINGS{10744431,
+@inproceedings{shukla2025lcgan,
+  abbr={IJCB},
+  title={Facial Demorphing from a Single Morph Using a Latent Conditional GAN},
   author={Shukla, Nitish and Ross, Arun},
-  booktitle={2024 IEEE International Joint Conference on Biometrics (IJCB)}, 
-  title={Facial Demorphing via Identity Preserving Image Decomposition}, 
+  booktitle={IEEE International Joint Conference on Biometrics (IJCB)},
+  year={2025},
+  arxiv={2507.18566},
+  code={https://github.com/nitishshukla86/Facial-Demorphing-from-a-Single-Morph-Using-a-Latent-Conditional-GAN},
+  preview={ijcb2025.PNG},
+  abstract={The method decomposes a morph in latent space, allowing it to demorph images created from unseen morph techniques and face styles. Trained on morphs created from synthetic faces and tested on morphs created from real faces using different morph techniques, the method outperforms existing methods by a considerable margin and produces high-fidelity demorphed face images.},
+  award={IAPR Best Biometrics Student Paper Award (BBSPA)},
+  selected={true},
+  bibtex_show={true}
+}
+
+@inproceedings{shukla2025diffdemorph,
+  abbr={ICIP},
+  title={diffDeMorph: Extending Reference-Free Demorphing to Unseen Faces},
+  author={Shukla, Nitish and Ross, Arun},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2025},
+  arxiv={2505.14527},
+  preview={diffdemorph_arch.png},
+  abstract={A diffusion-based approach, diffDeMorph, that disentangles component images from a composite morph with high visual fidelity. It is the first to generalize across morph techniques and face styles, beating the prior state of the art by at least 59.46% under a common training protocol across all datasets tested. The model is trained on morphs from synthetically generated faces and tested on real morphs.},
+  selected={true},
+  bibtex_show={true}
+}
+
+@inproceedings{shukla2025dcgan,
+  abbr={FG},
+  title={dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph},
+  author={Shukla, Nitish and Ross, Arun},
+  booktitle={IEEE International Conference on Automatic Face and Gesture Recognition (FG)},
+  year={2025},
+  arxiv={2411.14494},
+  code={https://github.com/nitishshukla86/dcGAN},
+  preview={dcgan_arch.png},
+  abstract={dc-GAN (dual-conditioned GAN) is a demorphing method conditioned on the morph image as well as the embedding extracted from the image. It overcomes the morph replication problem and produces high-fidelity reconstructions of the constituent images. The method is highly generalizable and applicable to both reference-based and reference-free demorphing. Experiments are conducted on the AMSL, FRLL-Morphs, and MorDiff datasets.},
+  doi={10.1109/FG61629.2025.11099072},
+  bibtex_show={true}
+}
+
+@inproceedings{shukla2025metric,
+  abbr={WACVW},
+  title={Metric for Evaluating Performance of Reference-Free Demorphing Methods},
+  author={Shukla, Nitish and Ross, Arun},
+  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW)},
+  year={2025},
+  pages={1670--1676},
+  arxiv={2501.12319},
+  preview={metric_comparison.png},
+  abstract={An analysis of the shortcomings of demorphing metrics currently used in the literature, and a new metric, biometrically cross-weighted IQA, that overcomes these issues. Current methods are extensively benchmarked on the proposed metric across six datasets and two commonly used face matchers.},
+  bibtex_show={true}
+}
+
+@inproceedings{shukla2024ipd,
+  abbr={IJCB},
+  title={Facial Demorphing via Identity Preserving Image Decomposition},
+  author={Shukla, Nitish and Ross, Arun},
+  booktitle={IEEE International Joint Conference on Biometrics (IJCB)},
   year={2024},
-  volume={},
-  number={},
-  pages={1-10},
-  keywords={Accuracy;Corporate acquisitions;Face recognition;Image decomposition;Security;Data mining;Image reconstruction},
-  doi={10.1109/IJCB62174.2024.10744431}}
+  pages={1--10},
+  arxiv={2408.10993},
+  preview={ipd_arch.png},
+  abstract={Demorphing is treated as an ill-posed decomposition problem. The proposed reference-free method decomposes the morph into several identity-preserving feature components; a merger network then weighs and combines these components to recover the bonafides with high accuracy. Experiments on CASIA-WebFace, SMDD, and AMSL demonstrate the effectiveness of the method.},
+  doi={10.1109/IJCB62174.2024.10744431},
+  bibtex_show={true}
+}
 
-
-
-@INPROCEEDINGS{10208601,
+@inproceedings{shukla2023adversarial,
+  abbr={CVPRW},
+  title={Generating Adversarial Attacks in the Latent Space},
   author={Shukla, Nitish and Banerjee, Sudipta},
-  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}, 
-  title={Generating Adversarial Attacks in the Latent Space}, 
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
   year={2023},
-  volume={},
-  number={},
-  pages={730-739},
-  keywords={Deep learning;Visualization;Computer vision;Perturbation methods;Conferences;Dogs;Generative adversarial networks},
-  doi={10.1109/CVPRW59228.2023.00080}}
+  pages={730--739},
+  html={https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pAedm2oAAAAJ&citation_for_view=pAedm2oAAAAJ:9yKSN-GCB0IC},
+  abstract={Adversarial perturbations are injected into the latent space of a generative model, producing semantically meaningful adversarial examples rather than imperceptible pixel-level noise. The approach reveals how DNN decision boundaries can be probed through structured manipulations in latent representations.},
+  doi={10.1109/CVPRW59228.2023.00080},
+  bibtex_show={true}
+}
 
-
-@INPROCEEDINGS{10448779,
+@inproceedings{shukla2023sdemorph,
+  abbr={IJCB},
+  title={SDeMorph: Towards Better Facial De-morphing from Single Morph},
   author={Shukla, Nitish},
-  booktitle={2023 IEEE International Joint Conference on Biometrics (IJCB)}, 
-  title={SDeMorph: Towards Better Facial De-morphing from Single Morph}, 
+  booktitle={IEEE International Joint Conference on Biometrics (IJCB)},
   year={2023},
-  volume={},
-  number={},
-  pages={1-9},
-  keywords={Visualization;Face recognition;Biological system modeling;Noise reduction;Probabilistic logic},
-  doi={10.1109/IJCB57857.2023.10448779}}
-
-
-
+  pages={1--9},
+  arxiv={2308.11442},
+  preview={sdemorph_arch.png},
+  abstract={SDeMorph (Stably Diffused De-morpher) is a reference-free demorphing method that recovers the identities of bona fides. It utilizes Denoising Diffusion Probabilistic Models (DDPM) by destroying the input morphed signal and reconstructing it using a branched-UNet, producing feature-rich, high-quality outputs. Experiments on AMSL, FRLL-FaceMorph, FRLL-MorDIFF, and SMDD support its effectiveness.},
+  doi={10.1109/IJCB57857.2023.10448779},
+  bibtex_show={true}
+}
