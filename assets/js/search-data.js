@@ -448,7 +448,7 @@ ninja.data = [{
           title: 'S2H-DPO - Hardness-Aware Preference Optimization for Vision–Language Models',
           description: "Nitish Shukla, Surgan Jandial, Arun Ross; Findings of ACL 2026",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/s2h_dpo/";
+              window.location.href = "/projects/s2h_dpo-writeup/";
             },},{id: "projects-sdemorph-towards-better-facial-de-morphing-from-a-single-morph",
           title: 'SDeMorph - Towards Better Facial De-morphing from a Single Morph',
           description: "Nitish Shukla; In Proceedings of IEEE IJCB 2023",
