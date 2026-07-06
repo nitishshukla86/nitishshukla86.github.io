@@ -6,6 +6,8 @@ img: assets/img/s2hdpo_main.png
 importance: 2
 category: work
 related_publications: true
+redirect: /projects/s2h_dpo/
+permalink: /projects/s2h_dpo-writeup/
 ---
 
 ## Research Goal

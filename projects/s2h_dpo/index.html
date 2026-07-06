@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta property="og:title" content="S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models" />
+    <meta property="og:description" content="A Simple-to-Hard (S2H) learning framework that systematically constructs multi-image preference data across three hierarchical reasoning levels." />
+    <meta property="og:url" content="https://s2hdpo.github.io" />
+    <meta property="og:image" content="./static/images/fig2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta name="description"
+        content="S2H-DPO advances the state of the art for holistic visual preference alignment by training Vision-Language Models on hierarchical multi-image reasoning." />
+    <meta name="keywords"
+        content="vision-language models, preference optimization, DPO, multi-image reasoning, visual alignment" />
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models" />
+    <meta name="twitter:description"
+        content="A Simple-to-Hard (S2H) learning framework for multi-image reasoning in VLMs." />
+    <meta name="twitter:image" content="./static/images/fig2.png" />
+    <meta name="twitter:image_alt" content="S2H-DPO Overview" />
+
+    <title>S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iag3ven.css">
+    <link rel="stylesheet" href="./static/css/prism.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.min.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+    <style>
+        @media screen and (max-width: 768px) {
+            .title.is-1 { font-size: 2rem !important; line-height: 1.2 !important; margin-bottom: 1rem !important; }
+            .publication-authors { font-size: 0.9rem !important; line-height: 1.8 !important; padding: 0 1rem !important; margin-bottom: 1rem !important; text-align: center !important; display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 0.5rem 1rem !important; }
+            .author-block { display: inline-block !important; margin: 0 !important; white-space: nowrap !important; flex: 0 0 auto !important; }
+            .publication-authors .author-block:not(:last-child):after { content: ""; }
+            .hero-body { padding: 2rem 0.5rem !important; }
+            .container.is-max-desktop { padding: 0 1rem !important; }
+            .buttons { flex-wrap: wrap; justify-content: center; margin-top: 1rem !important; }
+            .button { margin: 0.25rem !important; font-size: 0.9rem !important; }
+            .columns.is-centered { margin: 0 !important; }
+            .column.is-half { padding: 0.5rem !important; }
+            .column.is-three-fourths { padding: 0.5rem !important; }
+            .method-overview-text p { font-size: 0.95rem; }
+            figure img { max-width: 100%; height: auto; }
+            .table-container { font-size: 0.8rem; }
+            .table th, .table td { padding: 0.5rem 0.25rem !important; font-size: 0.75rem !important; }
+        }
+        @media screen and (max-width: 480px) {
+            .title.is-1 { font-size: 1.5rem !important; margin-bottom: 1rem !important; }
+            .publication-authors { font-size: 0.8rem !important; line-height: 1.8 !important; padding: 0 0.5rem !important; gap: 0.3rem 0.8rem !important; }
+            .hero-body { padding: 1.5rem 0.25rem !important; }
+            .container.is-max-desktop { padding: 0 0.5rem !important; }
+            .section { padding: 1.5rem 0; }
+            .button { font-size: 0.8rem !important; padding: 0.5rem 0.75rem !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <p style="padding: 20px;" />
+                        <h1 class="title is-1 publication-title">
+                            <span id="main-title">
+                                S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models
+                            </span>
+                        </h1>
+                        <div class="is-size-4 has-text-centered" style="margin-top: 0.3rem; margin-bottom: 0.3rem; color: #666; font-weight: 500;">
+                            ACL 2026
+                        </div>
+                        <div class="is-size-5 publication-authors" style="line-height: 2.2; font-weight: 500; white-space: nowrap;">
+                            <span class="author-block">
+                                <a href="#" target="_blank" class="author-name">Nitish Shukla</a><sup>1</sup>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="#" target="_blank" class="author-name">Surgan Jandial</a><sup>2</sup>
+                            </span>
+                            &nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="#" target="_blank" class="author-name">Arun Ross</a><sup>1</sup>
+                            </span>
+                        </div>
+                        <p style="padding: 0.2rem;" />
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block" style="color: #252525; margin-right: 1.5em;"><sup>1</sup>Michigan State University</span>
+                            <span class="author-block" style="color: #252525;"><sup>2</sup>Carnegie Mellon University</span>
+                        </div>
+
+                        <p style="padding: 10px;" />
+
+                        <div class="buttons is-centered">
+                            <button class="external-link button is-medium is-ghost publication-links is-rounded">
+                                <a href="https://aclanthology.org/2026.findings-acl.1825.pdf" target="_blank"
+                                    style="text-decoration:none;">
+                                    <span class="icon is-small">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Overview -->
+    <section class="section" id="method-overview">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered has-text-centered">
+                <div class="column" style="border-radius: 10px; background-color: rgb(255,255,255)">
+                    <div id="method-overview-wrapper">
+                        <img src="./static/images/fig2.png" alt="S2H-DPO Method Overview"
+                        class="method-overview-full-img method-overview" draggable="false" />                        
+                    </div>
+                    <div class="method-overview-text has-text-justified" style="max-width: 800px; margin: 0 auto;">
+                        <p>
+                            <strong>Overview of our method.</strong> We transform single-image data sources (e.g., LLaVA 665k, ImageNet) into multi-image datasets across visual modalities with progressively increasing cognitive load. Our synthetic transformation pipeline creates task hierarchies that advance from basic single-image understanding to complex multi-image reasoning requiring visual comparison, spatial reasoning, and cross-modal integration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Method Overview -->
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Vision-Language Models (VLMs) have demonstrated remarkable progress in single-image understanding, yet effective reasoning across multiple images remains challenging. We identify a critical capability gap in existing multi-image alignment approaches: current methods focus primarily on localized reasoning with pre-specified image indices ("Look at Image 3 and..."), bypassing the essential skills of global visual search and autonomous cross-image comparison. To address this limitation, we introduce a Simple-to-Hard (S2H) learning framework that systematically constructs multi-image preference data across three hierarchical reasoning levels requiring an increasing level of capabilities: (1) single-image localized reasoning, (2) multi-image localized comparison, and (3) global visual search. Unlike prior work that relies on model-specific attributes, such as hallucinations or attention heuristics, to generate preference pairs, our approach leverages prompt-driven complexity to create chosen/rejected pairs that are applicable across different models. Through extensive evaluations on LLaVA and Qwen-VL models, we show that our diverse multi-image reasoning data significantly enhances multi-image reasoning performance, yielding significant improvements over baseline methods across benchmarks. Importantly, our approach maintains strong single-image reasoning performance while simultaneously strengthening multi-image understanding capabilities, thus advancing the state of the art for holistic visual preference alignment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+    <!-- S2H Levels -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Multi-Image Reasoning Skill Hierarchy</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We argue that simply incorporating multi-image data is not enough. We explicitly define the capabilities needed for multi-image reasoning via a hierarchy:
+                        </p>
+                        <ul>
+                            <li><strong>Level 1 (Single-Image Localized):</strong> "What is the color of the car in Image 2?" — Reason about one pre-specified image.</li>
+                            <li><strong>Level 2 (Multi-Image Localized):</strong> "Do the cars in Image 1 and Image 3 have same color?" — Reason and Compare across multiple pre-specified images.</li>
+                            <li><strong>Level 3 (Global Visual Search):</strong> "Which images contain a white car?" — Reason and Search all images to locate relevant regions and carefully aggregate information.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full">
+                        <figure>
+                            <img src="./static/images/fig1.png" alt="Hierarchy of Reasoning Skills" draggable="false" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">S2H Data Format Generation</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We generate our multi-image preferences without manual human annotation. Chosen/rejected pairs are structurally designed across the three levels to teach targeted search versus general summarization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full">
+                        <figure>
+                            <img src="./static/images/fig3.png" alt="S2H DPO Data Format" draggable="false" />
+                            <figcaption class="has-text-centered">
+                                <em>Data formatting at each S2H complexity level.</em>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Main Results</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We evaluate our approach on complex multi-image benchmarks (BLINK, MANTIS, NLVR2) as well as single-image benchmarks (MMStar, POPE) to ensure single-image performance is preserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container is-max-desktop">
+                <div class="table-container" style="overflow-x: auto; margin-bottom: 2em;">
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <caption style="caption-side: top; padding: 10px 0; font-weight: bold;">
+                            Table 1: Main results on multi-image benchmarks. S2H-DPO consistently outperforms other DPO algorithms.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Models</th>
+                                <th class="has-text-centered">Parameter</th>
+                                <th class="has-text-centered">BLINK</th>
+                                <th class="has-text-centered">MANTIS</th>
+                                <th class="has-text-centered">NLVR2</th>
+                                <th class="has-text-centered">Average</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LLaVA-v1.5</td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered">37.10</td>
+                                <td class="has-text-centered">41.90</td>
+                                <td class="has-text-centered">52.10</td>
+                                <td class="has-text-centered">43.70</td>
+                            </tr>
+                            <tr>
+                                <td>+ MIA-DPO</td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered">42.90</td>
+                                <td class="has-text-centered">44.20</td>
+                                <td class="has-text-centered">54.20</td>
+                                <td class="has-text-centered">47.10</td>
+                            </tr>
+                            <tr style="background-color: #f0f8ff;">
+                                <td><strong>+ S2H-DPO (Ours)</strong></td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered"><strong>43.40</strong></td>
+                                <td class="has-text-centered"><strong>47.93</strong></td>
+                                <td class="has-text-centered"><strong>55.59</strong></td>
+                                <td class="has-text-centered"><strong>48.97</strong></td>
+                            </tr>
+                            <tr><td colspan="6" style="padding: 0;"></td></tr>
+                            <tr>
+                                <td>Qwen2.5-VL</td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered">54.29</td>
+                                <td class="has-text-centered">68.66</td>
+                                <td class="has-text-centered">74.28</td>
+                                <td class="has-text-centered">65.74</td>
+                            </tr>
+                            <tr>
+                                <td>+ MIA-DPO</td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered">41.28</td>
+                                <td class="has-text-centered">59.45</td>
+                                <td class="has-text-centered">74.18</td>
+                                <td class="has-text-centered">58.30</td>
+                            </tr>
+                            <tr style="background-color: #f0f8ff;">
+                                <td><strong>+ S2H-DPO (Ours)</strong></td>
+                                <td class="has-text-centered">7B</td>
+                                <td class="has-text-centered"><strong>55.85</strong></td>
+                                <td class="has-text-centered"><strong>74.19</strong></td>
+                                <td class="has-text-centered"><strong>74.67</strong></td>
+                                <td class="has-text-centered"><strong>68.24</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="columns is-centered">
+                    <div class="column is-full">
+                        <figure>
+                            <img src="./static/images/fig4.jpeg" alt="Global Visual Search Qualitative Outputs" draggable="false" />
+                            <figcaption class="has-text-centered">
+                                <em>Outputs of our method on Global Visual Search. Our approach effectively isolates the queried concept and produces accurate responses to the prompt.</em>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="paper">
+        <div class="container is-mobile">
+            <div class="columns is-centered has-text-centered">
+                <div class="container content">
+                    <h2 class="title is-3">BibTeX</h2>
+                    <div id="bibtex" class="column has-text-justified is-centered">
+                        <pre><code class="language-bibtex">@inproceedings{shukla2026s2hdpo,
+  title={S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models},
+  author={Shukla, Nitish and Jandial, Surgan and Ross, Arun},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
+  pages={36612--36623},
+  year={2026}
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="content">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
