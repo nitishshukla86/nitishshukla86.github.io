@@ -1,0 +1,81 @@
+@comment{ Manuscripts under review / in preparation.
+
+RENDERED ONLY when _pages/publications.md has `show_inprogress: true`. Set that to false and rebuild to
+remove every entry below from the public site in one edit.
+
+Deliberately contains NO quantitative results from unpublished work -- titles, authors, status and a
+one-line method description only. Keep it that way while these papers are under review. Add arxiv/doi/html
+fields as each one becomes public. }
+
+@unpublished{shukla2026sieve,
+  author    = {Shukla, Nitish and others},
+  title     = {SIEVE: Preserving Cross-Image Evidence via Depth-Aware Token Compression},
+  year      = {2026},
+  abbr      = {Under review},
+  note      = {Manuscript under review.},
+  code      = {https://github.com/nitishshukla86/SIEVE},
+  annotation = {Allocates a vision--language model's visual-token budget jointly across images and decoder depth.}
+}
+
+@unpublished{shukla2026cora,
+  author    = {Shukla, Nitish and Bui, Nhat-Tan and Jandial, Surgan and Mallick, Saswat Subhajyoti and Ross, Arun},
+  title     = {CORA: Geometry- and Question-Aware Visual Token Reduction for Multi-View 3D Question Answering},
+  year      = {2026},
+  abbr      = {Under review},
+  note      = {Manuscript under review.},
+  annotation = {Training-free reduction that decides which visual tokens to keep and when to remove them, using scene geometry and the question.}
+}
+
+@unpublished{shukla2026retrieval,
+  author    = {Shukla, Nitish and Prakash, Siddhant and Ross, Arun and Rangwani, Harsh},
+  title     = {Harnessing Multimodal LLMs for Attribute-Specific Image Retrieval},
+  year      = {2026},
+  abbr      = {Under review},
+  note      = {Manuscript under review; work done at Adobe Research.},
+  annotation = {Training-free, attribute-specific style embeddings read out of intermediate MLLM layers via dynamically generated prefixes.}
+}
+
+@unpublished{shukla2026triage,
+  author    = {Shukla, Nitish and others},
+  title     = {TRIAGE: Schema-Coverage-Driven Data Synthesis for Robust Text-to-SQL},
+  year      = {2026},
+  abbr      = {Under review},
+  note      = {Manuscript under review; work done at Adobe Research.},
+  annotation = {Synthesizes supervision for the schema paths a training set never covers, instead of scaling data volume.}
+}
+
+@unpublished{shukla2026morphlens,
+  author    = {Shukla, Nitish and others},
+  title     = {MorphLens: Exploiting Intermediate MLLM Representations for Single-Image Morphing Attack Detection},
+  year      = {2026},
+  abbr      = {In prep.},
+  note      = {Manuscript in preparation.},
+  annotation = {A label-free probe over an informative band of decoder layers, where morph evidence is strongest.}
+}
+
+@unpublished{shukla2026splitface,
+  author    = {Shukla, Nitish and Dwivedi, Rajeev and Kurmi, Vinod Kumar and Ross, Arun},
+  title     = {SplitFace: Rank-Regularized Branched Diffusion for Reference-Free Face Demorphing},
+  year      = {2026},
+  abbr      = {In prep.},
+  note      = {Manuscript in preparation.},
+  annotation = {Suppresses correlated directions across two diffusion decoder branches so they recover distinct identities.}
+}
+
+@unpublished{shukla2026usdm,
+  author    = {Shukla, Nitish and Ross, Arun},
+  title     = {Unsupervised Single-Image Face Demorphing via Reconstruction-Guided Latent Optimization},
+  year      = {2026},
+  abbr      = {In prep.},
+  note      = {Manuscript in preparation.},
+  annotation = {Test-time latent optimization on a frozen generative prior, with no morph--contributor training pairs.}
+}
+
+@unpublished{shukla2026onlinerl,
+  author    = {Shukla, Nitish and others},
+  title     = {The Model Is Its Own Reward: Online Reinforcement Learning of Visual Token Pruning for Multi-Image VLMs},
+  year      = {2026},
+  abbr      = {In prep.},
+  note      = {Manuscript in preparation.},
+  annotation = {Learns the pruning rule at test time from the frozen model's own internal signals, without labels or verifiers.}
+}

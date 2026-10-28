@@ -3,7 +3,7 @@ layout: profiles
 permalink: /people/
 title: people
 description: members of the lab or group
-nav: true
+nav: false # hidden: Einstein demo profiles (theme demo); set true once this page has real content
 nav_order: 7
 
 profiles:

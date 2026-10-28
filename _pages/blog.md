@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-nav: true
+nav: false # hidden: no posts (theme demo); set true once this page has real content
 nav_order: 1
 pagination:
   enabled: true
