@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: research
-description: Four directions, one question — what does a frozen model already know that it never reports?
+description: Research on efficient multimodal inference, interpretable representations, generative inverse problems, and biometric security.
 nav: true
 nav_order: 2
 
@@ -11,107 +11,113 @@ nav_order: 2
 show_inprogress: true
 ---
 
-My work starts from one observation: **large pretrained models compute far more than they report.** A
-vision–language model forms a decision across dozens of decoder layers and emits a single token; it attends
-to thousands of visual tokens of which a handful carry the answer; it can tell you how certain it is without
-anyone labelling the answer. Each of the directions below extracts some part of that unreported signal and
-puts it to work — to cut compute, to make a decision legible, or to replace human supervision.
+My research investigates **how visual AI systems can use available representations and data more
+effectively to support efficient, interpretable, and reliable inference**. I approach this question through
+four connected directions: multimodal efficiency, representation analysis, generative inverse problems,
+and biometric security.
 
----
+Facial demorphing is a recurring application and a demanding test of these ideas. Recovering two identities
+from one composite image requires both effective generative modeling and careful evaluation of what the
+model has actually recovered. My multimodal research extends this emphasis on informative representations
+to visual reasoning, retrieval, and inference under computational constraints.
 
-## 1. Efficient multimodal inference
+## Efficient multimodal inference
 
-A multi-image or multi-view prompt hands a vision–language model thousands of visual tokens, and the cost
-of the decoder's prefill grows with all of them. The usual fix is a fixed pruning rule, but no fixed rule is
-best across backbones, benchmarks and budgets — and pruning too early throws away evidence while pruning too
-late pays to process redundancy. I study **what to keep and when to drop it**, under an explicit budget:
-per-image quotas so no image disappears, depth-aware schedules derived in closed form, geometric coverage
-to remove repeated observations of the same surface, and question-conditioned selection once the question
-has had a chance to interact with the scene. All of it runs on frozen models at inference time, and all of
-it is evaluated against measured prefill FLOPs rather than token counts alone.
+**Research question:** Which visual tokens should a model retain, and at which layers, to preserve the
+evidence needed for reasoning within a fixed computational budget?
 
-{% if page.show_inprogress %}
-*Current manuscripts:* depth-aware token compression for multi-image models (SIEVE —
-[code](https://github.com/nitishshukla86/SIEVE)); geometry- and question-aware reduction for multi-view 3D
-question answering (CORA); and test-time online reinforcement learning of the pruning rule itself, where the
-reward comes from the model's own intermediate signals rather than from labels. *Under review / in
-preparation.*
-{% endif %}
+Multi-image and multi-view inputs can introduce thousands of visual tokens, increasing the cost of
+processing the input before answer generation. A fixed pruning strategy may remove useful evidence or
+retain redundant information. I study selection methods that account for the contribution of each image,
+the depth of the decoder, scene geometry, and the question being asked.
 
----
-
-## 2. Representation analysis in multimodal LLMs
-
-When a multimodal model answers a question, the answer token is the end of a long internal process — and not
-necessarily the most informative part of it. Tracing a model's judgement across decoder depth shows that the
-evidence often **peaks in intermediate layers and is attenuated by the output layer.** That makes the
-model's final answer the wrong thing to read. I build lightweight probes and prompt/prefix mechanisms that
-read the intermediate state instead: calibrated layer-attention probes for detection, and dynamically
-generated prefixes that pull apart what a single global embedding conflates, giving one representation per
-visual attribute. Nothing here fine-tunes the backbone; the contribution is in the readout.
-
-**Published:** *S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models*
-(Findings of ACL 2026) — preference pairs derived from task hardness rather than human annotation.
+The goal is to allocate computation to informative evidence while preserving coverage across images and
+views. This work studies frozen models at inference time and evaluates efficiency using measured prefill
+floating-point operations (FLOPs), alongside task performance.
 
 {% if page.show_inprogress %}
-*Current manuscripts:* intermediate-representation probing for single-image morphing attack detection
-(MorphLens); attribute-specific, training-free image retrieval from intermediate MLLM layers
-(with Adobe Research). *Under review / in preparation.*
+**Ongoing work:** SIEVE studies depth-aware token compression for multi-image models
+([code](https://github.com/nitishshukla86/SIEVE)); CORA investigates geometry- and question-aware reduction
+for multi-view 3D question answering. A further direction explores online reinforcement learning of
+pruning policies using internal model signals. These manuscripts are under review or in preparation.
 {% endif %}
 
----
+## Multimodal representation analysis
 
-## 3. Generative models for inverse problems
+**Research question:** How can intermediate model representations provide useful evidence beyond a
+model's final output?
 
-A face morph blends two people into one image that matches both. Recovering those two faces from the morph
-alone is badly ill-posed, and it has a seductive wrong answer: a model that simply returns its input twice
-scores well on reconstruction while recovering nobody. My work on this problem has been a sequence of
-attempts to make **separation**, not reconstruction, the thing being optimised and the thing being measured
-— identity-preserving decomposition, dual conditioning, generalisation to unseen faces and unseen morph
-generators, and an evaluation metric designed so that replication cannot win. The same toolkit —
-conditional diffusion, GANs, and optimisation on a frozen generative manifold — recurs throughout, and the
-most recent work needs no paired training data at all.
+A final answer or global image embedding can obscure information about visual attributes and the process
+that produced a decision. I study how this information varies across decoder layers and how lightweight
+probes and prompt-based mechanisms can extract it for downstream tasks. Applications include morphing
+attack detection and image retrieval based on specific visual attributes.
 
-**Published:** latent conditional GAN demorphing (IJCB 2025, **IAPR Best Biometrics Student Paper Award**);
-*diffDemorph* for unseen faces (ICIP 2025); *dc-GAN* (FG 2025); identity-preserving decomposition
-(IJCB 2024); *SDeMorph* (IJCB 2023); and a metric for evaluating reference-free demorphing (WACVW 2025).
+This direction emphasizes interpretable readouts from frozen backbones. In complementary work on
+multimodal learning, **S2H-DPO** (Findings of ACL 2026) constructs preference pairs based on task hardness,
+reducing reliance on human preference annotation for multi-image reasoning.
 
 {% if page.show_inprogress %}
-*Current manuscripts:* rank-regularised branched diffusion with region-level conditioning (SplitFace); and
-fully unsupervised demorphing by latent optimisation on a frozen generative prior, with no
-morph–contributor training pairs. *In preparation.*
+**Ongoing work:** MorphLens investigates intermediate representations for single-image morphing attack
+detection. Work with Adobe Research studies training-free, attribute-specific image retrieval using
+intermediate multimodal representations and dynamically generated prefixes. These manuscripts are under
+review or in preparation.
 {% endif %}
 
----
+## Generative models for inverse problems
 
-## 4. Trustworthy visual AI and biometric security
+**Research question:** How can a generative model recover distinct contributing identities from a single
+morphed face without relying on reconstruction quality alone?
 
-Detection, robustness and honest measurement, around the same application domain. This includes morphing
-attack detection that must hold up against morph generators it has never seen, adversarial examples
-synthesised in a generative latent space rather than in pixel space, and evaluation methodology — a
-recurring concern of mine, since several failure modes in this literature are artefacts of metrics that
-reward the wrong behaviour. Closing *coverage* gaps belongs here too: identifying where supervision is
-missing and synthesising exactly that, which is the idea behind both my semiconductor-defect work and my
-work on robust enterprise Text-to-SQL.
+Facial demorphing is an ill-posed inverse problem: multiple pairs of faces may explain the same composite
+image. A model can also reproduce the input morph in both outputs and receive favorable reconstruction
+scores without separating the identities. My work addresses this ambiguity through identity-preserving
+decomposition, conditional generation, and evaluation criteria that assess identity recovery explicitly.
 
-**Published:** *Generating Adversarial Attacks in the Latent Space* (CVPRW 2023); *Metric for Evaluating
-Performance of Reference-Free Demorphing Methods* (WACVW 2025).
+This research progresses from diffusion-based demorphing and identity-preserving decomposition to
+dual-conditioned GANs, diffusion models for unseen faces, and latent conditional generation. Across these
+methods, I examine generalization to unfamiliar identities, face styles, and morphing techniques.
+
+**Selected contributions:** SDeMorph (IJCB 2023); identity-preserving image decomposition (IJCB 2024);
+dc-GAN (FG 2025); diffDeMorph (ICIP 2025); and latent conditional GAN demorphing
+(IJCB 2025, **IAPR Best Biometrics Student Paper Award**). Complementary work at WACVW 2025 introduces
+a metric for evaluating reference-free demorphing.
 
 {% if page.show_inprogress %}
-*Current manuscripts:* label-free morphing attack detection under leave-one-dataset-out evaluation; and
-schema-coverage-driven data synthesis for Text-to-SQL (with Adobe Research). *Under review / in
-preparation.*
+**Ongoing work:** SplitFace studies rank-regularized branched diffusion with region-level conditioning.
+A separate direction investigates reconstruction-guided latent optimization on a frozen generative prior
+without morph–contributor training pairs. Both manuscripts are in preparation.
 {% endif %}
 
----
+## Trustworthy visual AI and biometric security
 
-## How the directions connect
+**Research question:** How should models be developed and evaluated when unfamiliar inputs, adversarial
+manipulation, or gaps in supervision can undermine reliability?
 
-The four are not separate interests. Directions 1 and 2 ask the same question of a frozen model — *what
-inside it tells us what matters?* — once for compute and once for interpretability. Direction 3 supplies the
-inverse problems where that question has consequences, and direction 4 supplies the adversarial pressure and
-the measurement discipline. A single methodological commitment runs through all of them: **get the signal
-from the model or the data you already have, rather than from new human labels.**
+I investigate morphing attack detection, adversarial examples generated in latent space, and evaluation
+protocols that expose failure modes hidden by aggregate performance measures. For biometric applications,
+this includes testing generalization across morph generators and datasets, and distinguishing genuine
+identity recovery from input replication.
 
-Full bibliography, with status for each entry, is on the
-[publications]({{ '/publications/' | relative_url }}) page.
+My broader applied work also examines gaps in training coverage, including synthetic data for
+semiconductor defect inspection and schema-aware data synthesis for enterprise Text-to-SQL.
+
+**Selected contributions:** Generating Adversarial Attacks in the Latent Space (CVPRW 2023) and
+Metric for Evaluating Performance of Reference-Free Demorphing Methods (WACVW 2025).
+
+{% if page.show_inprogress %}
+**Ongoing work:** label-free morphing attack detection under leave-one-dataset-out evaluation, and
+schema-coverage-driven data synthesis for Text-to-SQL with Adobe Research. These manuscripts are under
+review or in preparation.
+{% endif %}
+
+## A shared research agenda
+
+These directions connect through three priorities: identifying informative representations, using
+computation and supervision efficiently, and evaluating whether a model performs the intended task.
+Multimodal analysis provides tools for understanding visual evidence; generative inverse problems and
+biometric security provide settings in which the quality of that evidence has practical consequences.
+Together, they support my goal of developing visual AI systems whose efficiency and reliability can be
+assessed through explicit, task-relevant criteria.
+
+See my [publications]({{ '/publications/' | relative_url }}) for individual papers and manuscript status,
+and my [projects]({{ '/projects/' | relative_url }}) for detailed methods and results.

@@ -12,34 +12,28 @@ horizontal: false
 <!-- pages/projects.md -->
 
 <div class="research-goal">
-  <h2>Research Goal</h2>
+  <h2>From research questions to methods</h2>
   <p>
-    My research sits at the intersection of <strong>representation learning</strong> and
-    <strong>model reliability</strong> in deep learning, with a focus on how complex neural
-    systems encode, reason over, and sometimes fail to disentangle fine-grained visual
-    information in <strong>security-critical settings</strong>. I pursue two complementary
-    threads:
+    My projects investigate how visual models represent evidence, recover information from ambiguous
+    inputs, and support reliable decisions. Two complementary threads connect this work:
   </p>
   <ul>
     <li>
-      <strong>Generative face demorphing &amp; biometric security.</strong> Morph attacks
-      let a single forged face match multiple identities and threaten face recognition
-      systems. I build diffusion- and GAN-based reconstruction models, benchmarks, and
-      evaluation protocols that not only <em>detect</em> morphs but <em>recover</em> the
-      constituent identities — providing forensic evidence and strengthening downstream
-      morph attack detection.
+      <strong>Generative face demorphing and biometric security.</strong> I develop diffusion models,
+      GANs, and identity-preserving decomposition methods to recover contributing identities from a
+      single morphed face. This work also examines generalization to unfamiliar faces and morphing
+      techniques, with evaluation protocols that distinguish identity recovery from input replication.
     </li>
     <li>
-      <strong>Multimodal large language models (MLLMs).</strong> I study how MLLMs encode
-      and reason over visual information, addressing two questions: (a) how to optimize
-      MLLMs for multi-image reasoning without extensive human annotation, and (b) how to
-      leverage their internal representations to learn richer features for downstream
-      retrieval and generation tasks.
+      <strong>Multimodal learning and inference.</strong> I study preference optimization for multi-image
+      reasoning, visual token selection under computational constraints, and intermediate representations
+      for detection and attribute-specific retrieval. These projects examine how existing model
+      representations can reduce dependence on additional computation or human annotation.
     </li>
   </ul>
   <p>
-    The unifying goal is <strong>trustworthy visual intelligence</strong>: models that are
-    accurate, interpretable, and dependable when the stakes are high.
+    The projects below present the methods, experiments, and findings behind these directions.
+    For the broader research agenda, visit my <a href="{{ '/research/' | relative_url }}">research page</a>.
   </p>
 </div>
 

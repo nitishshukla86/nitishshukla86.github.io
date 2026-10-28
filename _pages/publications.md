@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Peer-reviewed papers, then manuscripts under review and in preparation. Status is stated for every entry.
+description: Publications and preprints in multimodal learning, generative modeling, and biometric security, followed by ongoing manuscripts.
 nav: true
 nav_order: 3
 
@@ -18,17 +18,17 @@ show_inprogress: true
 
 <div class="publications">
 
-<h2 class="bibliography">peer-reviewed</h2>
+<h2 class="bibliography">Publications &amp; preprints</h2>
 
 {% bibliography %}
 
 {% if page.show_inprogress %}
 
-<h2 class="bibliography">under review &amp; in preparation</h2>
+<h2 class="bibliography">Under review &amp; in preparation</h2>
 
 <p>
-  These manuscripts have <strong>not</strong> been peer reviewed or accepted anywhere. They are listed with
-  titles and status only; please <a href="mailto:shuklan3@msu.edu">email me</a> for a draft.
+  The following manuscripts are under review or in preparation and have not yet been accepted for publication.
+  Each entry includes its current status. Please <a href="mailto:shuklan3@msu.edu">contact me</a> to request a draft.
 </p>
 
 {% bibliography -f preprints %}

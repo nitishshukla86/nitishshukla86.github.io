@@ -15,15 +15,14 @@
 - title: Research Overview
   type: list
   contents:
-    - My research lies at the intersection of representation learning and model reliability
-      in deep learning, with a focus on how complex neural systems encode, reason over, and
-      sometimes fail to disentangle fine-grained visual information in security-critical
-      settings. I study how multimodal large language models (MLLMs) encode and reason over
-      facial information, analyze failure modes in multi-image reasoning, and leverage
-      internal representations for robust visual inference. A central theme of my work is
-      generative face demorphing and biometric verification, where I develop diffusion-based
-      inpainting models, benchmarks, and evaluation protocols that improve both face
-      recognition accuracy and downstream morph attack detection.
+    - I study efficient, interpretable, and reliable visual AI through multimodal learning,
+      representation analysis, and generative modeling. My research examines how pretrained models
+      encode visual evidence and how their internal representations can support reasoning, retrieval,
+      and detection with less computation or human annotation. A central application is facial
+      demorphing, where I develop diffusion models, GANs, and identity-preserving decomposition methods
+      to recover contributing identities from a single morphed image. This work emphasizes
+      generalization across faces and morphing techniques, supported by evaluation protocols that
+      assess identity recovery rather than reconstruction quality alone.
 
 - title: Education
   type: time_table
