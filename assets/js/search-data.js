@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "research",
-          description: "Four directions, one question — what does a frozen model already know that it never reports?",
+          description: "Research on efficient multimodal inference, interpretable representations, generative inverse problems, and biometric security.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-publications",
           title: "publications",
-          description: "Peer-reviewed papers, then manuscripts under review and in preparation. Status is stated for every entry.",
+          description: "Publications and preprints in multimodal learning, generative modeling, and biometric security, followed by ongoing manuscripts.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
