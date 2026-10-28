@@ -9,9 +9,16 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-research",
+          title: "research",
+          description: "Four directions, one question — what does a frozen model already know that it never reports?",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-publications",
           title: "publications",
-          description: "",
+          description: "Peer-reviewed papers, then manuscripts under review and in preparation. Status is stated for every entry.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -460,6 +467,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%73%68%75%6B%6C%61%6E%33@%6D%73%75.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/nitishshukla86", "_blank");
         },
       },{
         id: 'social-instagram',
