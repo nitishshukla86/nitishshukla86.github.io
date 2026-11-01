@@ -61,7 +61,7 @@ explore individual [projects]({{ '/projects/' | relative_url }}), or see my
 
 #### Research highlights
 
-- **Findings of ACL 2026:** S2H-DPO, a hardness-aware preference optimization framework for vision–language models.
+- **ACL 2026:** S2H-DPO, a hardness-aware preference optimization framework for vision–language models.
 - **IAPR Best Biometrics Student Paper Award, IJCB 2025:** facial demorphing from a single morph using a latent conditional GAN.
 - **Adobe Research internships, 2025 and 2026:** research on attribute-specific image retrieval and robust enterprise Text-to-SQL.
 
