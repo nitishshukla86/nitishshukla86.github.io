@@ -1,0 +1,191 @@
+/*******************************************************************************
+ * Site-specific overrides, loaded last.
+ * One accent (MSU Spartan green), Newsreader for headings, Inter for text,
+ * and quieter publication tags, buttons and year headings.
+ ******************************************************************************/
+
+:root {
+  --global-theme-color: #18453b;
+  --global-hover-color: #18453b;
+  --global-text-color: #1a1d1b;
+  --global-text-color-light: #5d6661;
+  --global-divider-color: rgba(26, 29, 27, 0.1);
+  --site-tag-bg: #eef2ef;
+  --site-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --site-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #8cc5ad;
+  --global-hover-color: #8cc5ad;
+  --global-text-color-light: #a3aca7;
+  --site-tag-bg: rgba(140, 197, 173, 0.12);
+}
+
+body {
+  font-family: var(--site-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, .post-title, .card-title, .page-title {
+  font-family: var(--site-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.post-header .post-title {
+  font-size: 2.6rem;
+}
+
+.post-description {
+  color: var(--global-text-color-light);
+}
+
+p, li {
+  font-weight: 400;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+// navigation: sentence case, no weight jumps
+.navbar .nav-link {
+  font-weight: 400;
+}
+
+.navbar .nav-item.active > .nav-link {
+  font-weight: 500;
+}
+
+// homepage profile: address in the text face, not monospace
+.profile .more-info {
+  font-family: var(--site-sans);
+  font-size: 0.92rem;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+}
+
+.profile img {
+  border-radius: 12px;
+}
+
+// social row: smaller, quieter icons
+.social .contact-icons {
+  font-size: 2rem;
+
+  a {
+    color: var(--global-text-color-light);
+    margin: 0 0.35rem;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// news: dates in the muted role
+.news table th {
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+// publications
+.publications {
+  h2.bibliography {
+    font-family: var(--site-serif);
+    color: var(--global-text-color-light);
+    font-size: 1.35rem;
+    text-align: left;
+    margin-top: 2.5rem;
+  }
+
+  ol.bibliography li {
+    .abbr abbr {
+      background-color: var(--site-tag-bg) !important;
+      color: var(--global-theme-color) !important;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      border-radius: 4px;
+
+      a {
+        color: var(--global-theme-color) !important;
+      }
+    }
+
+    .preview {
+      border-radius: 6px;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    .links a.btn {
+      text-transform: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: 6px;
+      border-color: var(--global-divider-color);
+      padding: 0.2rem 0.75rem;
+      box-shadow: none;
+      transition: color 0.15s ease, border-color 0.15s ease;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+
+    .links a.award.btn {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+}
+
+// project cards: titles sized for a card, not a page heading
+.projects .card {
+  border-radius: 12px;
+  overflow: hidden;
+
+  .card-title {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// CV: date tags in the accent, without the loud fill
+#cv .badge,
+.cv .badge {
+  background-color: var(--site-tag-bg) !important;
+  color: var(--global-theme-color) !important;
+  font-weight: 500;
+}
+
+// keywords under each publication
+.publications ol.bibliography li .keywords {
+  margin: 0.35rem 0 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  .keyword {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    color: var(--global-text-color-light);
+    background-color: var(--site-tag-bg);
+  }
+}

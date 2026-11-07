@@ -3,7 +3,7 @@ layout: page
 title: Facial Demorphing via Identity Preserving Image Decomposition
 description: Nitish Shukla, Arun Ross; In Proceedings of IEEE IJCB 2024
 img: assets/img/ipd_arch.png
-importance: 7
+importance: 14
 category: work
 related_publications: true
 ---

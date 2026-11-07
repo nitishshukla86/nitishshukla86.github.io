@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /research/
-title: research
+title: Research
 description: Research on efficient multimodal inference, interpretable representations, generative inverse problems, and biometric security.
 nav: true
 nav_order: 2
@@ -36,10 +36,11 @@ views. This work studies frozen models at inference time and evaluates efficienc
 floating-point operations (FLOPs), alongside task performance.
 
 {% if page.show_inprogress %}
-**Ongoing work:** SIEVE studies depth-aware token compression for multi-image models
-([code](https://github.com/nitishshukla86/SIEVE)); CORA investigates geometry- and question-aware reduction
-for multi-view 3D question answering. A further direction explores online reinforcement learning of
-pruning policies using internal model signals. These manuscripts are under review or in preparation.
+**Current work:** [SIEVE](https://nitishshukla86.github.io/SIEVE/) studies depth-aware token compression
+for multi-image models ([arXiv](https://arxiv.org/abs/2611.00351)); [CORA](https://nitishshukla86.github.io/CORA/)
+investigates geometry- and question-aware reduction for multi-view 3D question answering. A further direction
+explores online reinforcement learning of pruning policies using internal model signals. All three
+manuscripts are under review.
 {% endif %}
 
 ## Multimodal representation analysis
@@ -84,8 +85,8 @@ a metric for evaluating reference-free demorphing.
 
 {% if page.show_inprogress %}
 **Ongoing work:** SplitFace studies rank-regularized branched diffusion with region-level conditioning.
-A separate direction investigates reconstruction-guided latent optimization on a frozen generative prior
-without morph–contributor training pairs. Both manuscripts are in preparation.
+USDM investigates reconstruction-guided latent optimization on a frozen generative prior
+without morph–contributor training pairs. Both manuscripts are under review.
 {% endif %}
 
 ## Trustworthy visual AI and biometric security

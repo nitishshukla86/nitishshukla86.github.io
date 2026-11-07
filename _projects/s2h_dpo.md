@@ -3,7 +3,7 @@ layout: page
 title: S2H-DPO - Hardness-Aware Preference Optimization for Vision–Language Models
 description: Nitish Shukla, Surgan Jandial, Arun Ross; Findings of ACL 2026
 img: assets/img/s2hdpo_main.png
-importance: 2
+importance: 6
 category: work
 related_publications: true
 redirect: /projects/s2h_dpo/

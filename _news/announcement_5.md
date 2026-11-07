@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Started summer internship at Adobe Research. 🎊
+Started summer internship at Adobe Research.
 

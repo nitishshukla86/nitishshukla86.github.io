@@ -3,7 +3,7 @@ layout: page
 title: SDeMorph - Towards Better Facial De-morphing from a Single Morph
 description: Nitish Shukla; In Proceedings of IEEE IJCB 2023
 img: assets/img/sdemorph_arch.png
-importance: 8
+importance: 16
 category: work
 related_publications: true
 ---

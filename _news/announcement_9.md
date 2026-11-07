@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper titled "S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models" has been accepted to ACL 2026!. 🎊
+Paper titled "S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models" has been accepted to ACL 2026.

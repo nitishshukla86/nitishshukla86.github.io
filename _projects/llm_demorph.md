@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Enhancing Single-Image Facial Demorphing using Multimodal LLMs
-description: Nitish Shukla, Arun Ross; Under review, arXiv 2026
+description: Nitish Shukla, Arun Ross; Under review
 img: assets/img/llmdemorph_arch.png
-importance: 1
+importance: 5
 category: work
 related_publications: true
 ---

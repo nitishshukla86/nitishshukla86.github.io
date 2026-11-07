@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Selected research projects in face demorphing, biometric security, and multimodal large language models.
 nav: true

@@ -3,7 +3,7 @@ layout: page
 title: dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph
 description: Nitish Shukla, Arun Ross; In Proceedings of 19th IEEE FG 2025
 img: assets/img/fg2025.png
-importance: 5
+importance: 12
 category: work
 related_publications: true
 ---

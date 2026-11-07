@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Awarded IAPR Best Biometrics Student Paper Award (BBSPA) at IEEE International Joint Conference on Biometrics (IJCB), 2025. 🎊
+Awarded IAPR Best Biometrics Student Paper Award (BBSPA) at IEEE International Joint Conference on Biometrics (IJCB), 2025.

@@ -3,7 +3,7 @@ layout: page
 title: Facial Demorphing from a Single Morph Using a Latent Conditional GAN
 description: Nitish Shukla, Arun Ross; In Proceedings of IEEE IJCB 2025
 img: assets/img/ijcb2025.PNG
-importance: 3
+importance: 10
 category: work
 related_publications: true
 ---

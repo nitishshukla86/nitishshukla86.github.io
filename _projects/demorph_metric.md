@@ -3,7 +3,7 @@ layout: page
 title: A Metric for Evaluating Reference-Free Demorphing Methods
 description: Nitish Shukla, Arun Ross; In Proceedings of WACV Workshops (WACVW 2025)
 img: assets/img/metric_comparison.png
-importance: 6
+importance: 13
 category: work
 related_publications: true
 ---

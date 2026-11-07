@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD Student, Computer Science · <a href="https://iprobe.cse.msu.edu/index.php">iPRoBe Lab</a>, Michigan State University
 
