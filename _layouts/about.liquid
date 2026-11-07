@@ -17,7 +17,50 @@ layout: default
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
+        {% if page.profile.carousel %}
+          <div class="portrait-carousel" aria-roledescription="carousel" aria-label="Portraits">
+            <div class="portrait-frame">
+              {% for slide in page.profile.carousel %}
+                <figure class="portrait-slide{% if forloop.first %} active{% endif %}" aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
+                  <img
+                    src="{{ slide.image | prepend: 'assets/img/portraits/' | relative_url }}"
+                    alt="{% if slide.technique %}Portrait inspired by {{ slide.technique }}{% else %}Nitish Shukla{% endif %}"
+                    class="img-fluid z-depth-1"
+                    {% unless forloop.first %}loading="lazy"{% endunless %}
+                  >
+                  <figcaption>
+                    {% if slide.technique %}
+                      <span class="inspired">Inspired by //</span>
+                      <span class="technique technique-{{ slide.style }}">{{ slide.technique }}</span>
+                    {% endif %}
+                  </figcaption>
+                </figure>
+              {% endfor %}
+              <button type="button" class="portrait-nav prev" aria-label="Previous portrait"><i class="fa-solid fa-chevron-left"></i></button>
+              <button type="button" class="portrait-nav next" aria-label="Next portrait"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <script>
+            (function () {
+              const root = document.currentScript.previousElementSibling;
+              const slides = root.querySelectorAll(".portrait-slide");
+              let i = 0;
+              const show = (n) => {
+                slides[i].classList.remove("active");
+                slides[i].setAttribute("aria-hidden", "true");
+                i = (n + slides.length) % slides.length;
+                slides[i].classList.add("active");
+                slides[i].setAttribute("aria-hidden", "false");
+              };
+              root.querySelector(".prev").addEventListener("click", () => show(i - 1));
+              root.querySelector(".next").addEventListener("click", () => show(i + 1));
+              root.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowLeft") show(i - 1);
+                if (e.key === "ArrowRight") show(i + 1);
+              });
+            })();
+          </script>
+        {% elsif page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}

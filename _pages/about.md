@@ -7,6 +7,27 @@ subtitle: PhD Student, Computer Science · <a href="https://iprobe.cse.msu.edu/i
 profile:
   align: right
   image: prof_pic.jpg
+  # portraits in assets/img/portraits/; the first is the photo, the rest carry an "Inspired by" caption
+  carousel:
+    - image: main.jpg
+    - image: token_merging.jpg
+      technique: Visual token merging
+      style: pixel
+    - image: poster.jpg
+      technique: Conference poster
+      style: poster
+    - image: demorph.jpg
+      technique: Face demorphing
+      style: demorph
+    - image: token_compression.jpg
+      technique: Visual token compression
+      style: compression
+    - image: neon.jpg
+      technique: Neon
+      style: neon
+    - image: picasso.jpg
+      technique: Picasso
+      style: picasso
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>2335, Engineering Building</p>

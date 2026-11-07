@@ -189,3 +189,119 @@ b, strong {
     background-color: var(--site-tag-bg);
   }
 }
+
+// homepage portrait carousel
+.portrait-carousel {
+  .portrait-frame {
+    position: relative;
+  }
+
+  .portrait-slide {
+    display: none;
+    margin: 0;
+
+    &.active {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 900 / 1037;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    figcaption {
+      min-height: 3.4rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+    }
+  }
+
+  .inspired {
+    font-family: var(--site-sans);
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+
+  .technique {
+    font-size: 1.15rem;
+    line-height: 1.2;
+    color: var(--global-text-color);
+  }
+
+  .technique-demorph {
+    font-family: "Playfair Display", var(--site-serif);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .technique-pixel {
+    font-family: "Silkscreen", monospace;
+    font-size: 0.95rem;
+    color: #6a0dad;
+  }
+
+  .technique-compression {
+    font-family: "Space Grotesk", var(--site-sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .technique-poster {
+    font-family: "Archivo Black", var(--site-sans);
+    font-size: 1.05rem;
+    color: #5a189a;
+    border-bottom: 3px solid #5a189a;
+  }
+
+  .technique-neon {
+    font-family: "Tilt Neon", var(--site-sans);
+    font-size: 1.35rem;
+    color: #f4e9ff;
+    background: #0d0716;
+    padding: 0 0.45rem;
+    border-radius: 4px;
+    text-shadow:
+      0 0 4px #c77dff,
+      0 0 10px #9d4edd,
+      0 0 18px #7b2cbf;
+  }
+
+  .technique-picasso {
+    font-family: "Permanent Marker", var(--site-sans);
+    font-size: 1.3rem;
+    color: #b5651d;
+  }
+
+  .portrait-nav {
+    position: absolute;
+    top: calc(50% - 1.3rem - 18px);
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    color: #1a1d1b;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+    }
+
+    &.prev {
+      left: 8px;
+    }
+
+    &.next {
+      right: 8px;
+    }
+  }
+}
