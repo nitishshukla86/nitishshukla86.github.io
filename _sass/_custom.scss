@@ -107,6 +107,28 @@ b, strong {
   box-shadow: none;
 }
 
+// page ground: faint dot paper, fixed behind the content
+:root {
+  --site-page-bg: #f8f8f6;
+  --site-dot: rgba(24, 69, 59, 0.16);
+}
+
+html[data-theme="dark"] {
+  --site-page-bg: var(--global-bg-color);
+  --site-dot: rgba(220, 235, 228, 0.12);
+}
+
+body {
+  background-color: var(--site-page-bg);
+  background-image: radial-gradient(var(--site-dot) 1px, transparent 1.2px);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+}
+
+.navbar {
+  background-color: var(--site-page-bg) !important;
+}
+
 // news: dates in the muted role
 .news table th {
   font-weight: 500;
