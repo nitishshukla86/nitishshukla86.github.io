@@ -198,27 +198,30 @@ b, strong {
     position: relative;
   }
 
+  // the tile: a light shade of the theme green holding the image and its caption
   .portrait-slide {
     display: none;
     margin: 0;
+    padding: 8px 8px 6px;
+    border-radius: 14px;
+    background-color: var(--portrait-tile);
 
     &.active {
       display: block;
     }
 
-    // the image sits on a tile in a light shade of the theme green, so its edges read clearly
     img {
       width: 100%;
       aspect-ratio: 900 / 1037;
       object-fit: contain;
-      padding: 8px;
-      border-radius: 14px;
-      background-color: var(--portrait-tile);
+      border-radius: 8px;
+      box-shadow: none !important;
     }
 
     figcaption {
       min-height: 3.4rem;
-      margin-top: 0.5rem;
+      margin-top: 0.4rem;
+      padding: 0 0.25rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -325,9 +328,9 @@ b, strong {
   // arrows sit on the image edges, half inside and half outside, at the image's mid-height
   .portrait-nav-zone {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 8px;
+    left: 8px;
+    right: 8px;
     aspect-ratio: 900 / 1037;
     pointer-events: none;
   }
@@ -362,35 +365,23 @@ b, strong {
     }
 
     &.prev {
+      left: -28px;
+    }
+
+    &.next {
+      right: -28px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .portrait-carousel .portrait-nav {
+    &.prev {
       left: -20px;
     }
 
     &.next {
       right: -20px;
-    }
-  }
-}
-
-@media (max-width: 575px) {
-  .portrait-carousel .portrait-nav {
-    &.prev {
-      left: -12px;
-    }
-
-    &.next {
-      right: -12px;
-    }
-  }
-}
-
-@media (max-width: 575px) {
-  .portrait-carousel .portrait-nav {
-    &.prev {
-      left: -12px;
-    }
-
-    &.next {
-      right: -12px;
     }
   }
 }
