@@ -34,13 +34,22 @@ layout: default
                     {% endif %}
                     {% if slide.technique %}
                       <span class="inspired">Inspired by //</span>
-                      <span class="technique technique-{{ slide.style }}">{{ slide.technique }}</span>
+                      <span class="technique technique-{{ slide.style }}">
+                        {%- if slide.style == 'compression' -%}
+                          {%- assign words = slide.technique | split: ' ' -%}
+                          {%- for word in words -%}<span class="w w{{ forloop.index }}">{{ word }}</span>{% unless forloop.last %} {% endunless %}{%- endfor -%}
+                        {%- else -%}
+                          {{ slide.technique }}
+                        {%- endif -%}
+                      </span>
                     {% endif %}
                   </figcaption>
                 </figure>
               {% endfor %}
-              <button type="button" class="portrait-nav prev" aria-label="Previous portrait"><i class="fa-solid fa-chevron-left"></i></button>
-              <button type="button" class="portrait-nav next" aria-label="Next portrait"><i class="fa-solid fa-chevron-right"></i></button>
+              <div class="portrait-nav-zone">
+                <button type="button" class="portrait-nav prev" aria-label="Previous portrait"><i class="fa-solid fa-chevron-left"></i></button>
+                <button type="button" class="portrait-nav next" aria-label="Next portrait"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
             </div>
           </div>
           <script>
@@ -55,12 +64,25 @@ layout: default
                 slides[i].classList.add("active");
                 slides[i].setAttribute("aria-hidden", "false");
               };
-              root.querySelector(".prev").addEventListener("click", () => show(i - 1));
-              root.querySelector(".next").addEventListener("click", () => show(i + 1));
+              // advance every 2 s; pause while the pointer or keyboard focus is on the carousel,
+              // and not at all for visitors who ask for reduced motion
+              const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+              let timer = null;
+              const stop = () => { clearInterval(timer); timer = null; };
+              const start = () => { stop(); if (!still) timer = setInterval(() => show(i + 1), 2000); };
+              const step = (d) => { show(i + d); start(); };
+              root.querySelector(".prev").addEventListener("click", () => step(-1));
+              root.querySelector(".next").addEventListener("click", () => step(1));
               root.addEventListener("keydown", (e) => {
-                if (e.key === "ArrowLeft") show(i - 1);
-                if (e.key === "ArrowRight") show(i + 1);
+                if (e.key === "ArrowLeft") step(-1);
+                if (e.key === "ArrowRight") step(1);
               });
+              root.addEventListener("mouseenter", stop);
+              root.addEventListener("mouseleave", start);
+              root.addEventListener("focusin", stop);
+              root.addEventListener("focusout", start);
+              document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+              start();
             })();
           </script>
         {% elsif page.profile.image %}

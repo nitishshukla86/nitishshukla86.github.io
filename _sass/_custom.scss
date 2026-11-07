@@ -11,6 +11,7 @@
   --global-text-color-light: #5d6661;
   --global-divider-color: rgba(26, 29, 27, 0.1);
   --site-tag-bg: #eef2ef;
+  --portrait-tile: #d6e5de;
   --site-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --site-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -20,6 +21,7 @@ html[data-theme="dark"] {
   --global-hover-color: #8cc5ad;
   --global-text-color-light: #a3aca7;
   --site-tag-bg: rgba(140, 197, 173, 0.12);
+  --portrait-tile: rgba(140, 197, 173, 0.22);
 }
 
 body {
@@ -204,11 +206,14 @@ b, strong {
       display: block;
     }
 
+    // the image sits on a tile in a light shade of the theme green, so its edges read clearly
     img {
       width: 100%;
       aspect-ratio: 900 / 1037;
       object-fit: contain;
-      border-radius: 12px;
+      padding: 8px;
+      border-radius: 14px;
+      background-color: var(--portrait-tile);
     }
 
     figcaption {
@@ -263,8 +268,31 @@ b, strong {
 
   .technique-compression {
     font-family: "Space Grotesk", var(--site-sans);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    color: #5a189a;
+
+    .w {
+      display: inline-block;
+    }
+
+    .w1 {
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      color: #9d6bd6;
+    }
+
+    .w2 {
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #7b2cbf;
+    }
+
+    .w3 {
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      transform: scaleX(0.86);
+      transform-origin: left center;
+      color: #3c096c;
+    }
   }
 
   .technique-poster {
@@ -293,31 +321,75 @@ b, strong {
     color: #b5651d;
   }
 
+  // arrows sit on the image edges, half inside and half outside, at the image's mid-height
+  .portrait-nav-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 900 / 1037;
+    pointer-events: none;
+  }
+
   .portrait-nav {
     position: absolute;
-    top: calc(50% - 1.3rem - 18px);
-    width: 36px;
-    height: 36px;
-    border: 0;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    padding: 0;
+    border: 3px solid #ffffff;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.85);
-    color: #1a1d1b;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background: var(--global-theme-color);
+    color: #ffffff;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
     cursor: pointer;
-    opacity: 0.85;
-    transition: opacity 0.15s ease;
+    pointer-events: auto;
+    z-index: 2;
+    transition: transform 0.15s ease, background-color 0.15s ease;
 
     &:hover,
     &:focus-visible {
-      opacity: 1;
+      transform: scale(1.12);
+      background: #0f2f28;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
     }
 
     &.prev {
-      left: 8px;
+      left: -20px;
     }
 
     &.next {
-      right: 8px;
+      right: -20px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .portrait-carousel .portrait-nav {
+    &.prev {
+      left: -12px;
+    }
+
+    &.next {
+      right: -12px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .portrait-carousel .portrait-nav {
+    &.prev {
+      left: -12px;
+    }
+
+    &.next {
+      right: -12px;
     }
   }
 }
