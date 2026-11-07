@@ -233,6 +233,22 @@ b, strong {
     color: var(--global-text-color);
   }
 
+  // the photo is the "main" branch; the art versions branch off it
+  .branch {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 0 0.55rem;
+    border-radius: 6px;
+    color: #0969da;
+    background-color: #ddf4ff;
+
+    i {
+      font-size: 0.75rem;
+      margin-right: 0.15rem;
+    }
+  }
+
   .technique-demorph {
     font-family: "Playfair Display", var(--site-serif);
     font-style: italic;

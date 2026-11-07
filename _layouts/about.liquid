@@ -29,6 +29,9 @@ layout: default
                     {% unless forloop.first %}loading="lazy"{% endunless %}
                   >
                   <figcaption>
+                    {% if slide.branch %}
+                      <span class="branch"><i class="fa-solid fa-code-branch"></i> {{ slide.branch }}</span>
+                    {% endif %}
                     {% if slide.technique %}
                       <span class="inspired">Inspired by //</span>
                       <span class="technique technique-{{ slide.style }}">{{ slide.technique }}</span>

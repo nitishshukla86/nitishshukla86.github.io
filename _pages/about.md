@@ -10,6 +10,7 @@ profile:
   # portraits in assets/img/portraits/; the first is the photo, the rest carry an "Inspired by" caption
   carousel:
     - image: main.jpg
+      branch: main
     - image: token_merging.jpg
       technique: Visual token merging
       style: pixel
