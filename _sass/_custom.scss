@@ -272,6 +272,7 @@ b, strong {
 
     .w {
       display: inline-block;
+      margin-right: 0.3em;
     }
 
     .w1 {
@@ -391,5 +392,12 @@ b, strong {
     &.next {
       right: -12px;
     }
+  }
+}
+
+// room for the left arrow, which sticks out past the photo into the text column
+@media (min-width: 576px) {
+  .profile.float-right {
+    margin-left: 2.25rem;
   }
 }
