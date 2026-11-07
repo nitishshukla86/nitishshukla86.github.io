@@ -70,6 +70,11 @@ b, strong {
   line-height: 1.5;
 }
 
+// address: one line per item at every width
+.profile .more-info p {
+  display: block;
+}
+
 .profile img {
   border-radius: 12px;
 }
@@ -87,6 +92,19 @@ b, strong {
       color: var(--global-theme-color);
     }
   }
+}
+
+// search shortcut as a small keycap
+.navbar kbd.search-key {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  margin-right: 4px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  color: var(--global-text-color-light);
+  background: transparent;
+  box-shadow: none;
 }
 
 // news: dates in the muted role
