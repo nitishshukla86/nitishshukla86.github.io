@@ -4,34 +4,34 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-research",
-          title: "research",
+          title: "Research",
           description: "Research on efficient multimodal inference, interpretable representations, generative inverse problems, and biometric security.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-publications",
-          title: "publications",
-          description: "Publications and preprints in multimodal learning, generative modeling, and biometric security, followed by ongoing manuscripts.",
+          title: "Publications",
+          description: "Publications and preprints in multimodal learning, generative modeling, and biometric security.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "Selected research projects in face demorphing, biometric security, and multimodal large language models.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "PhD Student, Computer Vision &amp;amp; Multimodal Learning — Michigan State University",
           section: "Navigation",
           handler: () => {
@@ -407,7 +407,7 @@ ninja.data = [{
           title: 'Paper titled “dc-GAN: Dual-Conditioned GAN for Face Demorphing From a Single Morph” accepted...',
           description: "",
           section: "News",},{id: "news-started-summer-internship-at-adobe-research",
-          title: 'Started summer internship at Adobe Research. 🎊',
+          title: 'Started summer internship at Adobe Research.',
           description: "",
           section: "News",},{id: "news-paper-titled-diffdemorph-extending-reference-free-demorphing-to-unseen-faces-accepted-at-ieee-international-conference-on-image-processing-icip-2025",
           title: 'Paper titled “diffDemorph: Extending Reference-Free Demorphing to Unseen Faces” accepted at IEEE International...',
@@ -421,7 +421,22 @@ ninja.data = [{
           section: "News",},{id: "news-paper-titled-s2h-dpo-hardness-aware-preference-optimization-for-vision-language-models-has-been-accepted-to-acl-2026",
           title: 'Paper titled “S2H-DPO: Hardness-Aware Preference Optimization for Vision–Language Models” has been accepted to...',
           description: "",
-          section: "News",},{id: "projects-dc-gan-dual-conditioned-gan-for-face-demorphing-from-a-single-morph",
+          section: "News",},{id: "projects-generating-adversarial-attacks-in-the-latent-space",
+          title: 'Generating Adversarial Attacks in the Latent Space',
+          description: "Nitish Shukla, Sudipta Banerjee; In Proceedings of IEEE/CVF CVPR Workshops 2023",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/adversarial_latent/";
+            },},{id: "projects-harnessing-multimodal-llms-for-attribute-specific-image-retrieval",
+          title: 'Harnessing Multimodal LLMs for Attribute-Specific Image Retrieval',
+          description: "Nitish Shukla, Siddhant Prakash, Arun Ross, Harsh Rangwani; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/attribute_retrieval/";
+            },},{id: "projects-cora-geometry-and-question-aware-visual-token-reduction-for-multi-view-3d-question-answering",
+          title: 'CORA - Geometry- and Question-Aware Visual Token Reduction for Multi-View 3D Question Answering...',
+          description: "Nitish Shukla, Nhat-Tan Bui, Surgan Jandial, Saswat Subhajyoti Mallick, Arun Ross; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cora/";
+            },},{id: "projects-dc-gan-dual-conditioned-gan-for-face-demorphing-from-a-single-morph",
           title: 'dc-GAN - Dual Conditioned GAN for Face Demorphing From a Single Morph',
           description: "Nitish Shukla, Arun Ross; In Proceedings of 19th IEEE FG 2025",
           section: "Projects",handler: () => {
@@ -448,9 +463,19 @@ ninja.data = [{
               window.location.href = "/projects/latent_conditional_gan/";
             },},{id: "projects-enhancing-single-image-facial-demorphing-using-multimodal-llms",
           title: 'Enhancing Single-Image Facial Demorphing using Multimodal LLMs',
-          description: "Nitish Shukla, Arun Ross; Under review, arXiv 2026",
+          description: "Nitish Shukla, Arun Ross; Under review",
           section: "Projects",handler: () => {
               window.location.href = "/projects/llm_demorph/";
+            },},{id: "projects-morphlens-exploiting-intermediate-mllm-representations-for-single-image-morph-attack-detection",
+          title: 'MorphLens - Exploiting Intermediate MLLM Representations for Single-Image Morph Attack Detection',
+          description: "Nitish Shukla et al.; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/morphlens/";
+            },},{id: "projects-the-model-is-its-own-reward-online-reinforcement-learning-of-visual-token-pruning-for-multi-image-vlms",
+          title: 'The Model Is Its Own Reward - Online Reinforcement Learning of Visual Token...',
+          description: "Nitish Shukla et al.; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/online_rl_pruning/";
             },},{id: "projects-s2h-dpo-hardness-aware-preference-optimization-for-vision-language-models",
           title: 'S2H-DPO - Hardness-Aware Preference Optimization for Vision–Language Models',
           description: "Nitish Shukla, Surgan Jandial, Arun Ross; Findings of ACL 2026",
@@ -461,6 +486,21 @@ ninja.data = [{
           description: "Nitish Shukla; In Proceedings of IEEE IJCB 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sdemorph/";
+            },},{id: "projects-sieve-preserving-cross-image-evidence-via-depth-aware-token-compression",
+          title: 'SIEVE - Preserving Cross-Image Evidence via Depth-Aware Token Compression',
+          description: "Nitish Shukla, Surgan Jandial, Nhat-Tan Bui, Arun Ross; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sieve/";
+            },},{id: "projects-splitface-rank-regularized-branched-diffusion-for-reference-free-face-demorphing",
+          title: 'SplitFace - Rank-Regularized Branched Diffusion for Reference-Free Face Demorphing',
+          description: "Nitish Shukla, Rajeev Dwivedi, Vinod Kumar Kurmi, Arun Ross; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/splitface/";
+            },},{id: "projects-usdm-unsupervised-single-image-face-demorphing-via-reconstruction-guided-latent-optimization",
+          title: 'USDM - Unsupervised Single-Image Face Demorphing via Reconstruction-Guided Latent Optimization',
+          description: "Nitish Shukla, Rajeev Dwivedi, Vinod Kumar Kurmi, Arun Ross; Under review",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/usdm/";
             },},{
         id: 'social-email',
         title: 'email',
