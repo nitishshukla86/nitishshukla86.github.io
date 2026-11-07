@@ -22,8 +22,8 @@ and no finetuning of any network.
   face-recognition network stay frozen.
 
 <div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/publication_preview/usdm_preview.png" title="USDM: training-free demorphing" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/publication_preview/usdm_teaser.png" title="USDM overview" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 

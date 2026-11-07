@@ -24,8 +24,8 @@ remove facial structure the two contributors genuinely share.
   visual context through cross-attention.
 
 <div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/publication_preview/splitface_preview.png" title="SplitFace architecture" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/publication_preview/splitface_teaser.png" title="SplitFace overview" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
