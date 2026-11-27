@@ -27,7 +27,9 @@ latest_posts:
 
 I am a Ph.D. student in Computer Science at Michigan State University, advised by
 [Prof. Arun Ross](https://engineering.msu.edu/faculty/Arun-Ross) in the
-[iPRoBe Lab](https://iprobe.cse.msu.edu/index.php). I study **efficient AI, multimodal inference, and image disentanglement**.
+[iPRoBe Lab](https://iprobe.cse.msu.edu/index.php).
+
+**Research keywords:** Efficient AI · Multimodal inference · Image disentanglement
 
 Explore my [research]({{ '/research/' | relative_url }}), [projects]({{ '/projects/' | relative_url }}),
 and [publications]({{ '/publications/' | relative_url }}).
