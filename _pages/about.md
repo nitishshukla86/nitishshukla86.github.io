@@ -29,7 +29,7 @@ I am a Ph.D. student in Computer Science at Michigan State University, advised b
 [Prof. Arun Ross](https://engineering.msu.edu/faculty/Arun-Ross) in the
 [iPRoBe Lab](https://iprobe.cse.msu.edu/index.php).
 
-**Research keywords:** Efficient AI ⚡, Multimodal Learning 🧠, and Image Disentanglement 🖼️, with applications in visual reasoning, image retrieval, and biometric security. I am interested in making vision-language models more efficient at inference and using generative models to recover distinct identities from morphed faces.
+**Research keywords:** Efficient AI · Multimodal inference · Image disentanglement
 
 Explore my [research]({{ '/research/' | relative_url }}), [projects]({{ '/projects/' | relative_url }}),
 and [publications]({{ '/publications/' | relative_url }}).
